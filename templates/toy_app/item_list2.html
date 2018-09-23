@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+            <ul class="list-group">
+                {% for toy in object_list %}
+                    <li class="list-group-item">
+                        <div class="row">
+                            {{ toy.name }}
+                        </div>
+                        <div class="row">
+                            <img src="{{ toy.image }}">
+                        </div>
+                        <div class="row">
+                            {% for tag in toy.tag.all %}
+                                <span class="badge badge-pill badge-primary">
+                                {{ tag.name }}
+                                </span>
+                            {% endfor %}
+                        </div>
+                        <div class="row">
+                            {{ toy.description|truncatechars_html:80 }}
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="float-right">
+                                    <a class="btn btn-outline-secondary" href="#">Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
