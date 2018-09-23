@@ -1,1 +1,1 @@
-web: gunicorn practice_djpj.wsgi
+web: gunicorn config.wsgi
