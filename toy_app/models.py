@@ -10,8 +10,9 @@ class Tag(models.Model):
 
 
 class Item(models.Model):
+    official_url = models.URLField(verbose_name='公式URL', null=True)
     name = models.CharField(verbose_name='商品名', max_length=255)
-    image = models.URLField(verbose_name='商品画像')
+    image = models.URLField(verbose_name='商品画像', null=True)
     description = models.TextField(verbose_name='商品説明', null=True)
     tag = models.ManyToManyField(Tag, verbose_name="タグ", blank=True)
     # url
