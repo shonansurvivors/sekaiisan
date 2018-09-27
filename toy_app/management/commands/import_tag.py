@@ -7,11 +7,11 @@ from ...models import Item, Tag
 
 class Command(BaseCommand):
 
-    help = 'Create Item from json file'
+    help = 'Create Tag from json file'
 
     def handle(self, *args, **kwargs):
 
-        with open('model_data/item.json', 'r') as f:
+        with open('model_data/tag.json', 'r') as f:
 
             data = f.read()
 
@@ -20,4 +20,4 @@ class Command(BaseCommand):
                 obj.save()
                 count += 1
 
-            print(f'{count} items have been imported.')
+            print(f'{count} tags have been imported.')

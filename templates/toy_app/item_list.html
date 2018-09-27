@@ -1,34 +1,45 @@
-{% extends "base.html" %}
-{% block content %}
-<div class="container">
-	<div class="row">
-		<div>
-            {% for toy in object_list %}
-                <div class="col-sm-8">
-                    <div class="card">
-                        <h4 class="card-header">
-                            {{ forloop.counter }}位
-                        </h4>
-                        <img class="card-img-top" src="{{ toy.image }}">
-                        <div class="card-body">
-                            <p class="card-text">
-                                {% for tag in toy.tag.all %}
-                                    <span class="badge badge-pill badge-primary">
-                                    {{ tag.name }}
-                                    </span>
-                                {% endfor %}
-                            </p>
-                            <h4 class="card-title">
-                            {{ toy.name }}
-                            </h4>
-                            <p class="card-text">
-                                {{ toy.description|truncatechars_html:80 }}
-                            </p>
-                        </div>
-                    </div>
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    {% include "common_head.html" %}
+    <title>まごトイっしょ {{ tag.name }} おもちゃ一覧</title>
+    <meta name="description" content="お孫さんに贈るおもちゃ選びのお手伝い {{ tag.name }} おもちゃ一覧">
+</head>
+<body>
+    {% include "navbar.html" %}
+    <h1>
+        {{ tag.name }}
+    </h1>
+    <div class="container">
+        <div class="row">
+            {% for item in object_list %}
+            <div class="col-5 col-md-3 d-flex align-items-center">
+                <a href="{% url 'item_detail' item.pk %}">
+                    <img class="img-fluid" src="{{ item.image }}" alt="{{ item.name}}">
+                </a>
+            </div>
+            <div class="col-7 col-md-3">
+                {{ item.name }}
+                <div class="m-1">
+                    <a href="{{ item.amazon_url }}">
+                        <button type="button" class="btn btn-block btn-warning">amazon</button>
+                    </a>
                 </div>
+                <div class="m-1">
+                    <button type="button" class="btn btn-block btn-danger">楽天市場</button>
+                </div>
+                <div class="m-1">
+                    <button type="button" class="btn btn-block btn-outline-danger">Y!ショッピング</button>
+                </div>
+            </div>
+            <hr>
             {% endfor %}
         </div>
+        <div>
+            {% include "pagination.html" %}
+        </div>
     </div>
-</div>
-{% endblock %}
+    {% include "common_script.html" %}
+</body>
+</html>

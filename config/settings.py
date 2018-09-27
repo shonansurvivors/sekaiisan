@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'pure_pagination',
     'toy_app.apps.ToyAppConfig',
 ]
 
@@ -126,6 +127,13 @@ STATICFILES_DIR = [os.path.join(BASE_DIR, 'static')]
 # MEDIA_URL =
 # MEDIA_ROOT =
 
+'''
+PAGINATION_SETTINGS = {
+    'PAGE_RANGE_DISPLAYED': 2,
+    'MARGIN_PAGES_DISPLAYED': 2,
+    'SHOW_FIRST_PAGE_WHEN_INVALID': True,
+}
+'''
 
 import dj_database_url
 DATABASES['default'] = dj_database_url.config()
