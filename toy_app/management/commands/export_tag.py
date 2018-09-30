@@ -15,6 +15,5 @@ class Command(BaseCommand):
 
         json_data = json.loads(serializers.serialize('json', tags, ensure_ascii=False))
 
-        with open('model_data/tag.json', 'w', encoding='UTF-8') as f:
+        with open('model_data/export/tag.json', 'w', encoding='UTF-8') as f:
             json.dump(json_data, f, ensure_ascii=False, indent=4)
-

@@ -11,7 +11,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
 
-        with open('model_data/tag.json', 'r') as f:
+        with open('model_data/import/tag.json', 'r') as f:
 
             data = f.read()
 

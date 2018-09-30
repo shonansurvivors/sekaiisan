@@ -15,5 +15,5 @@ class Command(BaseCommand):
 
         json_data = json.loads(serializers.serialize('json', items, ensure_ascii=False))
 
-        with open('model_data/item.json', 'w', encoding='UTF-8') as f:
+        with open('model_data/export/item.json', 'w', encoding='UTF-8') as f:
             json.dump(json_data, f, ensure_ascii=False, indent=4)
