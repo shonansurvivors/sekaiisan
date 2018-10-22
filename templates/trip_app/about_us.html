@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    {% include "common_head.html" %}
+    <title>世界遺産旅行ブログ集 サイト説明</title>
+    <meta name="description" content="世界遺産旅行ブログ集 サイト説明">
+</head>
+<body>
+    {% include "navbar.html" %}
+    <div class="container">
+        <h1 class="h5">サイト説明</h1>
+        {{ site_master.description|safe }}
+    </div>
+    {% include "common_script.html" %}
+</body>
+</html>

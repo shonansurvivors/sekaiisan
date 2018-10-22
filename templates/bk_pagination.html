@@ -1,23 +1,26 @@
 {% if is_paginated %}
-  <nav>
-    <ul class="pagination pagination-sm justify-content-center">
+  <nav aria-label="Topics pagination">
+    <ul class="pagination pagination-sm">
       {% if page_obj.has_previous %}
         <li class="page-item">
-          <a class="page-link" href="?page=1">&laquo;</a>
+          <a class="page-link" href="?page={{ page_obj.previous_page_number }}">前</a>
         </li>
-        <li class="page-item">
-          <a class="page-link" href="?page={{ page_obj.previous_page_number }}">&lsaquo;</a>
+      {% else %}
+        <li class="page-item disabled">
+          <span class="page-link">前</span>
         </li>
       {% endif %}
 
+
       {% for page_num in paginator.page_range %}
-        {% if page_num == page_obj.number %}
+        {% if page_obj.number == page_num %}
           <li class="page-item active">
             <span class="page-link">
               {{ page_num }}
+              <span class="sr-only">(current)</span>
             </span>
           </li>
-        {% elif page_obj.number|add:"-3" <= page_num and page_num <= page_obj.number|add:"3" %}
+        {% else %}
           <li class="page-item">
             <a class="page-link" href="?page={{ page_num }}">{{ page_num }}</a>
           </li>
@@ -26,10 +29,11 @@
 
       {% if page_obj.has_next %}
         <li class="page-item">
-          <a class="page-link" href="?page={{ page_obj.next_page_number }}">&rsaquo;</a>
+          <a class="page-link" href="?page={{ page_obj.next_page_number }}">次</a>
         </li>
-        <li class="page-item">
-          <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">&raquo;</a>
+      {% else %}
+        <li class="page-item disabled">
+          <span class="page-link">次</span>
         </li>
       {% endif %}
     </ul>

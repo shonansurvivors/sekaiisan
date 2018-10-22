@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    {% include "common_head.html" %}
+    <title>世界遺産旅行ブログ集</title>
+    <meta name="description" content="世界遺産旅行ブログ集">
+</head>
+<body>
+    {% include "navbar.html" %}
+    <div class="container">
+        <form action="" accept-charset="UTF-8" method="POST">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="form-group">
+                    {{ field.errors }}
+                    <label for="{{ field.id_for_label }}">
+                        {{ field.label }}
+                    </label>
+                    {{ field }}
+                </div>
+            {% endfor %}
+            <button type="submit" class="btn btn-primary">送信</button>
+        </form>
+    </div>
+    {% include "common_script.html" %}
+</body>
+</html>

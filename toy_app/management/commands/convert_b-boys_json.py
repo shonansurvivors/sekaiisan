@@ -14,7 +14,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
 
-        with open('scraping_data/b-boys.json', 'r', encoding='UTF-8') as f:
+        with open('scraping_data/input/b-boys.json', 'r', encoding='UTF-8') as f:
 
             data = json.load(f)
 

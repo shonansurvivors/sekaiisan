@@ -4,6 +4,7 @@ from django.db import models
 
 class Tag(models.Model):
     name = models.CharField(verbose_name='タグ名', max_length=255, unique=True)
+    description = models.TextField(verbose_name='タグ説明', blank=True, null=True)
     created_at = models.DateTimeField(verbose_name='作成日', auto_now_add=True)
 
     def __str__(self):
@@ -17,7 +18,7 @@ class Item(models.Model):
     description = models.TextField(verbose_name='商品説明', blank=True, null=True)
     release_date = models.DateField(verbose_name='発売日', blank=True, null=True)
     proper_price = models.IntegerField(verbose_name='定価', blank=True, null=True)
-    tag = models.ManyToManyField(Tag, verbose_name="タグ", blank=True, null=True)
+    tag = models.ManyToManyField(Tag, verbose_name="タグ", blank=True)
     asin = models.CharField(verbose_name='ASIN', max_length=10, blank=True, null=True)
     amazon_url = models.URLField(verbose_name='Amazonアフィリエイト', blank=True, null=True)
 
