@@ -1,0 +1,9 @@
+[
+    {
+        "model": "trip_app.sitemaster",
+        "pk": 1,
+        "fields": {
+            "description": "<p>\r\n            本サイト「World Heritage Travellers!(WHTs!)」は、世界遺産に関するブログへのリンクを独自の基準で集めたものです。\r\n        </p>\r\n        <p>\r\n            魅力あふれるブログ記事を通して、世界遺産への関心を深めていただけば幸いです。\r\n        </p>"
+        }
+    }
+]
