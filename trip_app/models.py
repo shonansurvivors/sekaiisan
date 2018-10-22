@@ -207,7 +207,7 @@ class Blog(models.Model):
 
 
 class Article(models.Model):
-    url = models.URLField(verbose_name='URL', unique=True)
+    url = models.CharField(verbose_name='URL', max_length=2048, unique=True)
     title = models.CharField(verbose_name='タイトル', max_length=255, blank=True, null=True)
     text = models.TextField(verbose_name='本文', blank=True, null=True)
     word_count = models.IntegerField(verbose_name='字数', blank=True, default=0)
