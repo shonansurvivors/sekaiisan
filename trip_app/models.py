@@ -12,6 +12,8 @@ from .bing import Bing
 
 class SiteMaster(models.Model):
     description = models.TextField(verbose_name='サイト説明文', blank=True, null=True)
+    contact_form_utl = models.URLField(verbose_name='お問い合わせフォームURL', blank=True, null=True)
+    dummy = models.TextField(verbose_name='dummy', blank=True, null=True)
 
 
 class Country(models.Model):

@@ -29,6 +29,7 @@ class Migration(migrations.Migration):
             name='Heritage',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('short_name', models.CharField(max_length=255, verbose_name='略称')),
                 ('formal_name', models.CharField(max_length=255, verbose_name='正式名称')),
                 ('created_at', models.DateTimeField(auto_now_add=True, verbose_name='作成日')),
                 ('updated_at', models.DateTimeField(auto_now=True, verbose_name='更新日')),
