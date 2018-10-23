@@ -18,4 +18,8 @@ class Migration(migrations.Migration):
             name='heritage',
             options={'ordering': ('formal_name',)},
         ),
+        migrations.RemoveField(
+            model_name='heritage',
+            name='short_name',
+        ),
     ]
