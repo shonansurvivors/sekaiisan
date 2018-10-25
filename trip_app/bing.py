@@ -9,10 +9,34 @@ class Bing:
 
     def __init__(self):
 
-        self.search_term = '"世界遺産"+"旅行"(site:hatenablog.com OR hatenablog.jp OR hateblo.jp OR hatenadiary.com OR hatenadiary.jp)'
+        self.keywords = ['世界遺産', '旅行']
+        self.domains = ['hatenablog.com']
         self.urls = []
 
-    def get_urls(self, required_url_number=100):
+    def get_urls(self, required_url_number=50):
+
+        print(f'get_urls run.')
+
+        # ex) edited_keywords = '世界遺産 旅行'
+        edited_keywords = ''
+        for i, keyword in enumerate(self.keywords, 1):
+            edited_keywords += keyword
+            if i != len(self.keywords):
+                edited_keywords += ' '
+            else:
+                pass
+                # edited_keywords += ' -はてなブックマーク -はてなキーワード'
+
+        # ex) edited_domains = '(site:hatenablog.com OR hatenablog.jp OR hateblo.jp)'
+        edited_domains = '(site:'
+        for i, domain in enumerate(self.domains, 1):
+            edited_domains += domain
+            if i != len(self.domains):
+                edited_domains += ' OR '
+            else:
+                edited_domains += ')'
+
+        search_term = f'{edited_keywords}{edited_domains}'
 
         # 欲しいURLの数
         required_url_number = required_url_number
@@ -30,7 +54,7 @@ class Bing:
         for i in range(request_times):
 
             params = parse.urlencode(
-                {"q": self.search_term,
+                {"q": search_term,
                  "count": count,
                  "offset": count * i}
                 )
@@ -39,7 +63,11 @@ class Bing:
             response.raise_for_status()
             search_results = response.json()
 
-            for value in search_results['webPages']['value']:
-                self.urls.append(value['url'])
+            try:
+                for value in search_results['webPages']['value']:
+                    self.urls.append(value['url'])
+                    print(value['url'])
+            except KeyError:
+                print('KeyError')
 
         return self.urls

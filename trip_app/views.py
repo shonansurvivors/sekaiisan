@@ -31,6 +31,7 @@ class ContactView(FormView):
 class AreaCountryListView(View):
     def get(self, request, area):
 
+        # todo blog_hidden
         country_list = Country.objects.filter(area=area).filter(heritage__article__word_count_per_image__gt=0).\
             annotate(article_count=Count('formal_name')).order_by('id')
 
@@ -40,6 +41,7 @@ class AreaCountryListView(View):
 class CountryHeritageListView(View):
     def get(self, request, name):
 
+        # todo blog_hidden
         heritage_list = Heritage.objects.filter(country__formal_name=name).\
             filter(article__word_count_per_image__gt=0).annotate(article_count=Count('formal_name')).order_by('id')
 
@@ -54,6 +56,7 @@ class CountryHeritageListView(View):
 class HeritageListView(View):
     def get(self, request):
 
+        # todo blog_hidden
         heritage_list = Heritage.objects.\
             filter(article__word_count_per_image__gt=0).annotate(article_count=Count('formal_name')).order_by('id')
 
@@ -63,7 +66,8 @@ class HeritageListView(View):
 class HeritageArticleListView(View):
     def get(self, request, name):
 
-        article_list = Article.objects.filter(heritage__formal_name=name).filter(word_count_per_image__gt=0)
+        article_list = Article.objects.filter(blog__hidden=False).filter(heritage__formal_name=name).\
+            filter(word_count_per_image__gt=0).order_by('-created_at')
 
         context = {
             'heritage_name': name,
@@ -76,6 +80,8 @@ class HeritageArticleListView(View):
 class ArticleListView(ListView):
 
     model = Article
-    queryset = Article.objects.filter(heritage__isnull=False).filter(word_count_per_image__gt=0).distinct()
+    queryset = Article.objects.filter(blog__hidden=False).filter(heritage__isnull=False).\
+        filter(word_count_per_image__gt=0).distinct()
+    ordering = ['-created_at']
     paginate_by = 20
     template_name = 'trip_app/article_list.html'
