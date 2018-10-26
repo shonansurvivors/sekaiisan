@@ -3,14 +3,20 @@
 
 <head>
     {% include "common_head.html" %}
-    <title>世界遺産旅行ブログ集</title>
-    <meta name="description" content="世界遺産旅行ブログ集">
-</head>
+    <title>世界遺産トラベラーズ 世界遺産ブログ集 {{ area_name }} 国一覧</title>
+    <meta name="description" content="世界遺産トラベラーズ 世界遺産ブログ集 {{ area_name }} 国一覧"></head>
 <body>
     {% include "navbar.html" %}
     <div class="container">
-        {% for country in country_list %}
         <div class="row">
+            <div class="card w-100">
+                <div class="card-body">
+                    <h1 class="card-title h5">
+                        {{ area_name }}
+                    </h1>
+                </div>
+            </div>
+            {% for country in country_list %}
             <div class="card w-100">
                 <div class="card-body">
                     <h2 class="card-title h6">
@@ -23,8 +29,8 @@
                     </h2>
                 </div>
             </div>
-        </div>
         {% endfor %}
+        </div>
     </div>
     {% include "common_script.html" %}
 </body>

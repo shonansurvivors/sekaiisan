@@ -3,16 +3,22 @@
 
 <head>
     {% include "common_head.html" %}
-    <title>世界遺産ブログ集 {{ heritage_name }} 一覧</title>
-    <meta name="description" content="世界遺産ブログ集 {{ heritage_name }} 一覧">
+    <title>世界遺産トラベラーズ 世界遺産ブログ集 {{ heritage_name }} ブログ一覧</title>
+    <meta name="description" content="世界遺産トラベラーズ 世界遺産ブログ集 {{ heritage_name }} ブログ一覧">
 </head>
 <body>
     {% include "navbar.html" %}
     <div class="container">
         <div class="row">
-            <h1 class="h5">
-                {{ heritage_name }}
-            </h1>
+            {% if heritage_name %}
+            <div class="card w-100">
+                <div class="card-body">
+                    <h1 class="card-title h5">
+                        {{ heritage_name }}
+                    </h1>
+                </div>
+            </div>
+            {% endif %}
             {% for article in article_list %}
             <div class="card w-100">
                 <div class="card-body">
@@ -27,7 +33,7 @@
                     {% for heritage in article.heritage.all %}
                         <a href="{% url 'heritage_article_list' heritage.formal_name %}"
                            class="badge badge-pill badge-info">
-                            {{ heritage.formal_name|truncatechars_html:20 }}
+                            {{ heritage.formal_name|truncatechars_html:24 }}
                         </a>
                     {% endfor %}
                 </div>

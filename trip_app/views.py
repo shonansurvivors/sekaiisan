@@ -35,7 +35,13 @@ class AreaCountryListView(View):
         country_list = Country.objects.filter(area=area).filter(heritage__article__word_count_per_image__gt=0).\
             annotate(article_count=Count('formal_name')).order_by('id')
 
-        return render(request, 'trip_app/country_list.html', {'country_list': country_list})
+        context = {
+            'area_name': country_list[0].get_area_display,
+            'country_list': country_list,
+        }
+
+
+        return render(request, 'trip_app/country_list.html', context)
 
 
 class CountryHeritageListView(View):
