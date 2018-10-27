@@ -3,8 +3,13 @@
 
 <head>
     {% include "common_head.html" %}
-    <title>世界遺産トラベラーズ 世界遺産ブログ集 {{ heritage_name }} ブログ一覧</title>
-    <meta name="description" content="世界遺産トラベラーズ 世界遺産ブログ集 {{ heritage_name }} ブログ一覧">
+    {% if heritage_name %}
+        <title>世界遺産ブログ集 {{ heritage_name }}のブログ一覧</title>
+        <meta name="description" content="世界遺産トラベラーズは、世界遺産に関するブログを集めたサイトです。世界遺産「{{ heritage_name }}」に関するブログはこちら。">
+    {% else %}
+        <title>世界遺産ブログ集 全てのブログ一覧</title>
+        <meta name="description" content="世界遺産トラベラーズは、世界遺産に関するブログを集めたサイトです。世界遺産「{{ article_list.0.heritage.all.0 }}」や、その他の世界遺産に関するブログはこちら。">
+    {% endif %}
 </head>
 <body>
     {% include "navbar.html" %}
