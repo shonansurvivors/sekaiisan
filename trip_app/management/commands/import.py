@@ -8,6 +8,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
 
+        '''
         with open('trip_app/model_data/import/site_master.json', 'r') as f:
 
             print('SiteMaster')
@@ -17,6 +18,7 @@ class Command(BaseCommand):
                 obj.save()
                 count += 1
             print(f'{count} objects have been imported.')
+        '''
 
         with open('trip_app/model_data/import/country.json', 'r') as f:
 
