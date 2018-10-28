@@ -1,4 +1,3 @@
-import pprint
 import random
 import re
 from time import sleep
@@ -221,7 +220,7 @@ class Article(models.Model):
 
             for heritage in heritages:
 
-                print(heritage.regex)
+                # print(heritage.regex)
 
                 if re.search(heritage.regex, self.text):
                     self.heritage.add(heritage)
@@ -257,6 +256,7 @@ class Article(models.Model):
 
         print(f'scraping_content run. Article.pk: {self.pk} url: {self.url}')
 
+        sleep(1)
         r = requests.get(self.url)
         soup = BeautifulSoup(r.content, 'lxml')
 
@@ -306,7 +306,6 @@ class Article(models.Model):
                 if 0 < article.word_count < 1000:
                     continue
 
-            sleep(0.5)
             article.scraping_content()
 
     @classmethod

@@ -1,5 +1,5 @@
-import json
 import math
+from time import sleep
 from urllib import parse
 
 import requests
@@ -59,6 +59,7 @@ class Bing:
                  "offset": count * i}
                 )
 
+            sleep(0.5)
             response = requests.get(search_url, headers=headers, params=params)
             response.raise_for_status()
             search_results = response.json()
