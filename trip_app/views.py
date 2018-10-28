@@ -31,7 +31,6 @@ class ContactView(FormView):
 class AreaCountryListView(View):
     def get(self, request, area):
 
-        # todo blog_hidden
         country_list = Country.objects.\
             filter(area=area, heritage__article__word_count_per_image__gt=0, heritage__article__blog__hidden=False).\
             annotate(article_count=Count('heritage')).order_by('formal_name')
@@ -82,7 +81,28 @@ class ArticleListView(ListView):
     template_name = 'trip_app/article_list.html'
 
 
-class BlogListView(View):
+class HeritageListView(ListView):
+
+    model = Heritage
+    queryset = Heritage.objects.\
+            filter(article__word_count_per_image__gt=0, article__blog__hidden=False).\
+            annotate(article_count=Count('article', distinct=True))
+    ordering = ['formal_name']
+    paginate_by = 40
+    template_name = 'trip_app/heritage_list.html'
+
+
+class BlogListView(ListView):
+
+    model = Blog
+    queryset = Blog.objects.\
+            filter(hidden=False, article__heritage__isnull=False, article__word_count_per_image__gt=0).\
+            annotate(article_count=Count('article', distinct=True))
+    ordering = ['-article_count']
+    paginate_by = 40
+    template_name = 'trip_app/blog_list.html'
+
+    '''
     def get(self, request):
 
         blog_list = Blog.objects.\
@@ -90,18 +110,19 @@ class BlogListView(View):
             annotate(article_count=Count('article', distinct=True)).order_by('-article_count')
 
         return render(request, 'trip_app/blog_list.html', {'blog_list': blog_list})
+    '''
 
 
 class BlogArticleListView(View):
+
     def get(self, request, pk):
 
-        blog = Blog.objects.get(pk=pk)
-
         article_list = Article.objects.\
-            filter(blog=blog, blog__hidden=False, heritage__isnull=False, word_count_per_image__gt=0).distinct()
+            filter(blog__pk=pk, blog__hidden=False, heritage__isnull=False, word_count_per_image__gt=0).\
+            order_by('-created_at').distinct()
 
         context = {
-            'heritage_name': blog.title,
+            'blog_object': Blog.objects.get(pk=pk),
             'article_list': article_list,
         }
 

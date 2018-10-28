@@ -7,29 +7,32 @@
     <meta name="description" content="世界遺産トラベラーズは、世界遺産に関するブログを集めたサイトです。{{ area_name }}の世界遺産に関するブログはこちら。"></head>
 <body>
     {% include "navbar.html" %}
+    {% include "navbar_sub.html" %}
     <div class="container">
         <div class="row">
             <div class="card w-100">
                 <div class="card-body">
-                    <h1 class="card-title h5">
-                        {{ area_name }}
+                    <h1 class="card-text h5">
+                        {{ area_name }} 一覧
                     </h1>
                 </div>
             </div>
-            {% for country in country_list %}
             <div class="card w-100">
-                <div class="card-body">
-                    <h2 class="card-title h6">
-                        <a href="{% url 'country_heritage_list' country.formal_name %}">
-                            {{ country.formal_name }}
-                        </a>
-                        <span class="badge badge-pill badge-primary">
-                            {{ country.article_count }}
-                        </span>
-                    </h2>
-                </div>
+                <ul class="list-group">
+                    {% for country in country_list %}
+                        <li class="list-group-item">
+                            <h2 class="h6">
+                                <a href="{% url 'country_heritage_list' country.formal_name %}">
+                                    {{ country.formal_name }}
+                                </a>
+                                <span class="badge badge-pill badge-primary">
+                                    {{ country.article_count }}
+                                </span>
+                            </h2>
+                        </li>
+                    {% endfor %}
+                </ul>
             </div>
-        {% endfor %}
         </div>
     </div>
     {% include "footer.html" %}

@@ -4,25 +4,45 @@
 <head>
     {% include "common_head.html" %}
     {% if heritage_name %}
-        <title>世界遺産ブログ集 {{ heritage_name }}のブログ一覧</title>
-        <meta name="description" content="世界遺産トラベラーズは、世界遺産に関するブログを集めたサイトです。世界遺産「{{ heritage_name }}」に関するブログはこちら。">
+        <title>世界遺産ブログ集 {{ heritage_name }}のブログ記事一覧</title>
+        <meta name="description" content="世界遺産トラベラーズは、世界遺産に関するブログを集めたサイトです。世界遺産「{{ heritage_name }}」に関するブログ記事はこちら。">
+    {% elif blog_object %}
+        <title>世界遺産ブログ集 {{ blog_object.title }}のブログ記事一覧</title>
+        <meta name="description" content="世界遺産トラベラーズは、世界遺産に関するブログを集めたサイトです。「{{ blog_object.title }}」の世界遺産に関するブログ記事はこちら。">
     {% else %}
-        <title>世界遺産ブログ集 全てのブログ一覧</title>
-        <meta name="description" content="世界遺産トラベラーズは、世界遺産に関するブログを集めたサイトです。世界遺産「{{ article_list.0.heritage.all.0 }}」や、その他の世界遺産に関するブログはこちら。">
+        <title>世界遺産ブログ集 すべてのブログ記事一覧</title>
+        <meta name="description" content="世界遺産トラベラーズは、世界遺産に関するブログを集めたサイトです。世界遺産「{{ article_list.0.heritage.all.0 }}」や、その他の世界遺産に関するブログ記事はこちら。">
     {% endif %}
 </head>
 <body>
     {% include "navbar.html" %}
+    {% include "navbar_sub.html" %}
     <div class="container">
         <div class="row">
             {% if heritage_name %}
-            <div class="card w-100">
-                <div class="card-body">
-                    <h1 class="card-title h5">
-                        {{ heritage_name }}
-                    </h1>
+                <div class="card w-100">
+                    <div class="card-body">
+                        <h1 class="card-text h5">
+                            {{ heritage_name }}のブログ記事一覧
+                        </h1>
+                    </div>
                 </div>
-            </div>
+            {% elif blog_object %}
+                <div class="card w-100">
+                    <div class="card-body">
+                        <h1 class="card-text h5">
+                            <a href="http://{{ blog_object.domain }}" target="_blank">{{ blog_object.title }}</a>のブログ記事一覧
+                        </h1>
+                    </div>
+                </div>
+            {% else %}
+                <div class="card w-100">
+                    <div class="card-body">
+                        <h1 class="card-text h5">
+                            ブログ記事一覧
+                        </h1>
+                    </div>
+                </div>
             {% endif %}
             {% for article in article_list %}
             <div class="card w-100">
@@ -35,12 +55,25 @@
                     <p class="card-text text-secondary small">
                         {{ article.text|truncatechars_html:80 }}
                     </p>
+                    <ul class="list-inline">
                     {% for heritage in article.heritage.all %}
-                        <a href="{% url 'heritage_article_list' heritage.formal_name %}"
-                           class="badge badge-pill badge-info">
-                            {{ heritage.formal_name|truncatechars_html:24 }}
-                        </a>
+                        <li class="list-inline-item">
+                            <a href="{% url 'heritage_article_list' heritage.formal_name %}"
+                               class="badge badge-pill badge-info">
+                                {{ heritage.formal_name|truncatechars_html:24 }}
+                            </a>
+                        </li>
                     {% endfor %}
+                    </ul>
+                    {% if blog_object == None %}
+                    <p>
+                        <a href="{% url 'blog_article_list' article.blog.pk %}">
+                            <button type="button" class="btn btn-outline-info btn-sm">
+                                {{ article.blog.title|truncatechars_html:22 }}
+                            </button>
+                        </a>
+                    </p>
+                    {% endif %}
                 </div>
             </div>
             {% endfor %}

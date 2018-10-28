@@ -3,35 +3,41 @@
 
 <head>
     {% include "common_head.html" %}
-    <title>世界遺産トラベラーズ 世界遺産ブログ集 ブログサイト一覧</title>
-    <meta name="description" content="世界遺産トラベラーズ 世界遺産ブログ集 ブログサイト一覧">
+    <title>世界遺産ブログ集 ブログ一覧</title>
+    <meta name="description" content="世界遺産トラベラーズは、世界遺産に関するブログを集めたサイトです。ブログ一覧はこちら。">
 </head>
 <body>
     {% include "navbar.html" %}
+    {% include "navbar_sub.html" %}
     <div class="container">
         <div class="row">
             <div class="card w-100">
                 <div class="card-body">
-                    <h1 class="card-title h5">
-                        ブログサイト一覧
+                    <h1 class="card-text h5">
+                        ブログ一覧
                     </h1>
                 </div>
             </div>
-            {% for blog in blog_list %}
             <div class="card w-100">
-                <div class="card-body">
-                    <h2 class="card-title h6">
-                        <a href="{% url 'blog_article_list' blog.pk %}">
-                            {{ blog.title }}
-                        </a>
-                        <span class="badge badge-pill badge-primary">
-                            {{ blog.article_count }}
-                        </span>
-                    </h2>
-                </div>
+                <ul class="list-group">
+                    {% for blog in blog_list %}
+                        <li class="list-group-item">
+                            <h2 class="h6">
+                                <a href="{% url 'blog_article_list' blog.pk %}">
+                                    <button type="button" class="btn btn-outline-info btn-sm">
+                                        {{ blog.title|truncatechars_html:20 }}
+                                        <span class="badge badge-pill badge-primary">
+                                            {{ blog.article_count }}
+                                        </span>
+                                    </button>
+                                </a>
+                            </h2>
+                        </li>
+                    {% endfor %}
+                </ul>
             </div>
-            {% endfor %}
         </div>
+        {% include "pagination.html" %}
     </div>
     {% include "footer.html" %}
     {% include "common_script.html" %}
