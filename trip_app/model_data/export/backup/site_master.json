@@ -1,0 +1,11 @@
+[
+    {
+        "model": "trip_app.sitemaster",
+        "pk": 1,
+        "fields": {
+            "description": "<p>\r\n            世界遺産トラベラーズは、世界遺産に関するブログへのリンクを独自の基準で集めた世界遺産ブログ集です。\r\n        </p>\r\n        <p>\r\n            各ブログに掲載されたリアルな旅の感想や美しい写真を通して、世界遺産への関心をさらに深めていただけば幸いです。\r\n        </p>",
+            "contact_form_utl": "https://docs.google.com/forms/d/e/1FAIpQLSdk9s2hl1n9VR3VxWLdjhnTYEBPMdK1Zew76wwcbeegJ8lE5w/viewform",
+            "dummy": ""
+        }
+    }
+]

@@ -220,7 +220,7 @@ class Article(models.Model):
 
             for heritage in heritages:
 
-                # print(heritage.regex)
+                print(heritage.regex)
 
                 if re.search(heritage.regex, self.text):
                     self.heritage.add(heritage)
@@ -236,13 +236,12 @@ class Article(models.Model):
 
         for article in articles:
 
-            # article.update_heritage(heritages=heritages)
-
             print(f'update_heritage run. Article.pk: {article.pk} title: {article.title}')
 
-            article.heritage.clear()
+            # 500字未満のブログ記事は対象外とし効率化
+            if article.word_count >= 500:
 
-            if article.text:
+                article.heritage.clear()
 
                 for heritage in heritages:
 
@@ -251,6 +250,9 @@ class Article(models.Model):
                         print(f'Article.heritage add. heritage: {heritage.formal_name}')
 
                 article.save()
+
+            else:
+                print('word_count is less than 1000')
 
     def scraping_content(self):
 
@@ -332,7 +334,8 @@ class Article(models.Model):
         bing = Bing()
         heritages = Heritage.objects.filter(article__isnull=True)
 
-        bing.keywords = ['世界遺産', '旅', heritages[random.randrange(len(heritages))].formal_name]
+        # 検索ワードが長すぎるとヒットしない？かもしれないので15文字までにしてみる
+        bing.keywords = ['世界遺産', '旅', heritages[random.randrange(len(heritages))].formal_name[:15]]
 
         print(f'bing.keywords: {bing.keywords}')
 
@@ -351,3 +354,14 @@ class Article(models.Model):
 
             except IntegrityError:
                 print(f'Article is not created.IntegrityError. url: {url}')
+
+    @classmethod
+    def delete_garbage(cls):
+
+        print(f'delete_garbage run.')
+
+        num = cls.objects.filter(heritage__isnull=True).count()
+
+        cls.objects.filter(heritage__isnull=True).delete()
+
+        print(f'delete {num} articles ')

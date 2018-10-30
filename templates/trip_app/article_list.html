@@ -4,14 +4,14 @@
 <head>
     {% include "common_head.html" %}
     {% if heritage_name %}
-        <title>世界遺産ブログ集 {{ heritage_name }}のブログ記事一覧</title>
-        <meta name="description" content="世界遺産トラベラーズは、世界遺産に関するブログを集めたサイトです。世界遺産「{{ heritage_name }}」に関するブログ記事はこちら。">
+        <title>世界遺産トラベラーズ {{ heritage_name }}</title>
+        <meta name="description" content="世界遺産へのリアルな旅行記を、あなたの旅の参考に。1158件のブログを掲載中。{{ heritage_name }}の旅行ブログはこちら。">
     {% elif blog_object %}
-        <title>世界遺産ブログ集 {{ blog_object.title }}のブログ記事一覧</title>
-        <meta name="description" content="世界遺産トラベラーズは、世界遺産に関するブログを集めたサイトです。「{{ blog_object.title }}」の世界遺産に関するブログ記事はこちら。">
+        <title>世界遺産トラベラーズ {{ blog_object.title }}</title>
+        <meta name="description" content="世界遺産へのリアルな旅行記を、あなたの旅の参考に。1158件のブログを掲載中。">
     {% else %}
-        <title>世界遺産ブログ集 すべてのブログ記事一覧</title>
-        <meta name="description" content="世界遺産トラベラーズは、世界遺産に関するブログを集めたサイトです。世界遺産「{{ article_list.0.heritage.all.0 }}」や、その他の世界遺産に関するブログ記事はこちら。">
+        <title>世界遺産トラベラーズ</title>
+        <meta name="description" content="世界遺産へのリアルな旅行記を、あなたの旅の参考に。1158件のブログを掲載中。">
     {% endif %}
 </head>
 <body>

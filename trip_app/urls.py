@@ -12,4 +12,5 @@ urlpatterns = [
     path('blog/<int:pk>', views.BlogArticleListView.as_view(), name='blog_article_list'),
     # path('contact/', views.ContactView.as_view(), name='contact'),
     path('about-us/', views.AboutUsView.as_view(), name='about-us'),
+    path('nonheritage/', views.NonArticleHeritageListView.as_view(), name='nonheritage_list'),
 ]
