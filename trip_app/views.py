@@ -64,8 +64,10 @@ class HeritageArticleListView(View):
         article_list = Article.objects.\
             filter(blog__hidden=False, heritage__formal_name=name, word_count_per_image__gt=0).order_by('-created_at')
 
+        heritage_object = Heritage.objects.get(formal_name=name)
+
         context = {
-            'heritage_name': name,
+            'heritage_object': heritage_object,
             'article_list': article_list,
         }
 

@@ -3,15 +3,15 @@
 
 <head>
     {% include "common_head.html" %}
-    {% if heritage_name %}
-        <title>世界遺産トラベラーズ {{ heritage_name }}</title>
-        <meta name="description" content="世界遺産へのリアルな旅行記を、あなたの旅の参考に。1158件のブログを掲載中。{{ heritage_name }}の旅行ブログはこちら。">
+    {% if heritage_object %}
+        <title>世界遺産 {{ heritage_object.formal_name|truncatechars_html:20 }}に関するブログ一覧</title>
+        <meta name="description" content="{{ heritage_object.country }}の世界遺産「{{ heritage_object.formal_name }}」へのリアルな旅行記を、あなたの旅の参考に。当サイトは世界遺産に関するブログ集です。1158件掲載中。">
     {% elif blog_object %}
-        <title>世界遺産トラベラーズ {{ blog_object.title }}</title>
-        <meta name="description" content="世界遺産へのリアルな旅行記を、あなたの旅の参考に。1158件のブログを掲載中。">
+        <title>ブログ {{ blog_object.title }}の世界遺産に関するブログ記事一覧</title>
+        <meta name="description" content="世界遺産へのリアルな旅行記を、あなたの旅の参考に。当サイトは世界遺産に関するブログ集です。1158件掲載中。">
     {% else %}
         <title>世界遺産トラベラーズ</title>
-        <meta name="description" content="世界遺産へのリアルな旅行記を、あなたの旅の参考に。1158件のブログを掲載中。">
+        <meta name="description" content="世界遺産へのリアルな旅行記を、あなたの旅の参考に。当サイトは世界遺産に関するブログ集です。1158件掲載中。">
     {% endif %}
 </head>
 <body>
@@ -23,7 +23,7 @@
                 <div class="card w-100">
                     <div class="card-body">
                         <h1 class="card-text h5">
-                            {{ heritage_name }}のブログ記事一覧
+                            {{ heritage_object.formal_nam }}のブログ記事一覧
                         </h1>
                     </div>
                 </div>
