@@ -4,13 +4,14 @@
 <head>
     {% include "common_head.html" %}
     {% if heritage_object %}
-        <title>{{ heritage_object.formal_name|truncatechars_html:30 }}の旅行記・ブログ集</title>
-        <meta name="description" content="{{ heritage_object.country }}の世界遺産 {{ heritage_object.formal_name }}の旅行記・ブログ。">
+        <title>{{ heritage_object.country.short_name }} {{ heritage_object.formal_name|truncatechars_html:20 }}の旅行記・ブログ集</title>
+        <meta name="description" content="{{ article_list.0.title }} / {{ article_list.1.title }} / {{ article_list.2.title }}">
     {% elif blog_object %}
-        <title>{{ blog_object.title }}の旅行記・ブログ集|世界遺産トラベラーズ</title>
-        <meta name="description" content="{{ article_list.0.title }}|{{ article_list.1.title }}|{{ article_list.2.title }}">
+        <title>{{ article_list.0.heritage.all.0.country.short_name }} {{ article_list.0.heritage.all.0.formal_name }}の旅行記・ブログ集</title>
+        <meta name="description" content="{{ article_list.0.title }} / {{ article_list.1.title }} / {{ article_list.2.title }}">
     {% else %}
-        <title>世界遺産の旅行記・ブログ集|世界遺産トラベラーズ</title>
+        <title>世界遺産の旅行記・ブログ集 | 世界遺産トラベラーズ</title>
+        <meta name="description" content="日本・海外の世界遺産に関するブログへのリンクを多数掲載。アンコールワット、ガウディの作品群、タージマハル、フィレンツェ、プラハ、ホイアン...">
     {% endif %}
 </head>
 <body>

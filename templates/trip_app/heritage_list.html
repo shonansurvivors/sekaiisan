@@ -4,10 +4,11 @@
 <head>
     {% include "common_head.html" %}
     {% if country_name %}
-        <title>{{ country_object.short_name }}の旅行記・ブログ集|世界遺産トラベラーズ</title>
-        <meta name="description" content="{{ country_name }}の旅行記・ブログ集。">
+        <title>{{ country_object.short_name }}の旅行記・ブログ集 | 世界遺産トラベラーズ</title>
+        <meta name="description" content="{{ heritage_list.0.formal_name }} / {{ heritage_list.1.formal_name }} / {{ heritage_list.2.formal_name }}">
     {% else %}
-        <title>世界遺産の旅行記・ブログ集</title>
+        <title>世界遺産の旅行記・ブログ集 | 世界遺産トラベラーズ</title>
+        <meta name="description" content="日本・海外の世界遺産に関するブログへのリンクを多数掲載。アンコールワット、ガウディの作品群、タージマハル、フィレンツェ、プラハ、ホイアン...">
     {% endif %}
 </head>
 <body>
