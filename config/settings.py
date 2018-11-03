@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'pure_pagination',
     'toy_app.apps.ToyAppConfig',
     'trip_app.apps.TripAppConfig',
+#    'debug_toolbar',
 ]
 
 SITE_ID = 1
@@ -56,6 +57,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+#    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -157,3 +159,13 @@ try:
     from .local_settings import *
 except ImportError:
     pass
+
+if DEBUG:
+
+    INSTALLED_APPS += [
+        'debug_toolbar',
+    ]
+
+    MIDDLEWARE += [
+        'debug_toolbar.middleware.DebugToolbarMiddleware',
+    ]

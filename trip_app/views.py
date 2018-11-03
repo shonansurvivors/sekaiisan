@@ -62,7 +62,8 @@ class HeritageArticleListView(View):
     def get(self, request, name):
 
         article_list = Article.objects.\
-            filter(blog__hidden=False, heritage__formal_name=name, word_count_per_image__gt=0).order_by('-created_at')
+            filter(blog__hidden=False, heritage__formal_name=name, word_count_per_image__gt=0).\
+            select_related('blog').prefetch_related('heritage').order_by('-created_at')
 
         heritage_object = Heritage.objects.get(formal_name=name)
 
@@ -77,7 +78,8 @@ class HeritageArticleListView(View):
 class ArticleListView(ListView):
 
     model = Article
-    queryset = Article.objects.filter(blog__hidden=False, heritage__isnull=False, word_count_per_image__gt=0).distinct()
+    queryset = Article.objects.filter(word_count_per_image__gt=0, heritage__isnull=False, blog__hidden=False). \
+        select_related('blog').prefetch_related('heritage').distinct()
     ordering = ['-created_at']
     paginate_by = 20
     template_name = 'trip_app/article_list.html'
@@ -120,7 +122,7 @@ class BlogArticleListView(View):
 
         article_list = Article.objects.\
             filter(blog__pk=pk, blog__hidden=False, heritage__isnull=False, word_count_per_image__gt=0).\
-            order_by('-created_at').distinct()
+            prefetch_related('heritage').order_by('-created_at').distinct()
 
         context = {
             'blog_object': Blog.objects.get(pk=pk),

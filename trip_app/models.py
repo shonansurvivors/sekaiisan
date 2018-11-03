@@ -20,7 +20,7 @@ class SiteMaster(models.Model):
 
 
 class Country(models.Model):
-    formal_name = models.CharField(verbose_name='正式名称', max_length=255, blank=True, null=True)
+    formal_name = models.CharField(verbose_name='正式名称', max_length=255, db_index=True, blank=True, null=True)
     area_choices = (
         ('EU', 'ヨーロッパ'),
         ('AS', 'アジア'),
@@ -38,7 +38,7 @@ class Country(models.Model):
 
 
 class Heritage(models.Model):
-    formal_name = models.CharField(verbose_name='名称', max_length=255)
+    formal_name = models.CharField(verbose_name='名称', max_length=255, db_index=True)
     country = models.ForeignKey(Country, verbose_name='国', on_delete=models.SET_NULL, null=True)
     regex = models.CharField('正規表現', max_length=255, blank=True, null=True)
     created_at = models.DateTimeField(verbose_name='作成日', auto_now_add=True)
