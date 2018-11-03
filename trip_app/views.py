@@ -121,7 +121,7 @@ class BlogArticleListView(View):
     def get(self, request, pk):
 
         article_list = Article.objects.\
-            filter(blog__pk=pk, blog__hidden=False, heritage__isnull=False, word_count_per_image__gt=0).\
+            filter(blog__pk=pk, blog__hidden=False, heritage__isnull=False, word_count_per_image__gt=0). \
             prefetch_related('heritage').order_by('-created_at').distinct()
 
         context = {

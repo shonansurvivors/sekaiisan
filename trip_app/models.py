@@ -183,7 +183,7 @@ class Article(models.Model):
     text = models.TextField(verbose_name='本文', blank=True, null=True)
     word_count = models.IntegerField(verbose_name='字数', blank=True, default=0)
     image_count = models.IntegerField(verbose_name='画像数', blank=True, default=0)
-    word_count_per_image = models.IntegerField(verbose_name='画像あたり字数', blank=True, default=0)
+    word_count_per_image = models.IntegerField(verbose_name='画像あたり字数', db_index=True, blank=True, default=0)
     heritage = models.ManyToManyField(Heritage, verbose_name="世界遺産", blank=True)
     blog = models.ForeignKey(Blog, verbose_name='ブログ', on_delete=models.SET_NULL, null=True)
     hidden = models.BooleanField(verbose_name='非表示', default=False)
