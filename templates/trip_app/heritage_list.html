@@ -4,7 +4,7 @@
 <head>
     {% include "common_head.html" %}
     {% if country_name %}
-        <title>{{ country_name }}の旅行記・ブログ集|世界遺産トラベラーズ</title>
+        <title>{{ country_object.short_name }}の旅行記・ブログ集|世界遺産トラベラーズ</title>
         <meta name="description" content="{{ country_name }}の旅行記・ブログ集。">
     {% else %}
         <title>世界遺産の旅行記・ブログ集</title>
@@ -15,11 +15,11 @@
     {% include "navbar_sub.html" %}
     <div class="container">
         <div class="row">
-            {% if country_name %}
+            {% if country_object %}
                 <div class="card w-100">
                     <div class="card-body">
                         <h1 class="card-text h5">
-                            {{ country_name }} 一覧
+                            {{ country_object.short_name }} 一覧
                         </h1>
                     </div>
                 </div>

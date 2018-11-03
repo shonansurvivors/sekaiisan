@@ -33,7 +33,7 @@ class AreaCountryListView(View):
 
         country_list = Country.objects.\
             filter(area=area, heritage__article__word_count_per_image__gt=0, heritage__article__blog__hidden=False).\
-            annotate(article_count=Count('heritage')).order_by('formal_name')
+            annotate(article_count=Count('heritage')).order_by('short_name')
 
         context = {
             'area_name': country_list[0].get_area_display,
@@ -50,8 +50,10 @@ class CountryHeritageListView(View):
             filter(country__formal_name=name, article__word_count_per_image__gt=0, article__blog__hidden=False).\
             annotate(article_count=Count('article', distinct=True)).order_by('formal_name')
 
+        country_object = Country.objects.get(formal_name=name)
+
         context = {
-            'country_name': name,
+            'country_object': country_object,
             'heritage_list': heritage_list,
         }
 

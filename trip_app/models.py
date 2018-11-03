@@ -21,6 +21,7 @@ class SiteMaster(models.Model):
 
 class Country(models.Model):
     formal_name = models.CharField(verbose_name='正式名称', max_length=255, db_index=True, blank=True, null=True)
+    short_name = models.CharField(verbose_name='通称', max_length=255, blank=True, null=True)
     area_choices = (
         ('EU', 'ヨーロッパ'),
         ('AS', 'アジア'),
@@ -175,6 +176,17 @@ class Blog(models.Model):
 
     def __str__(self):
         return self.title
+
+    @classmethod
+    def delete_garbage(cls):
+
+        print(f'delete_garbage run.')
+
+        num = cls.objects.filter(article__isnull=True).count()
+
+        cls.objects.filter(article__isnull=True).delete()
+
+        print(f'delete {num} blogs ')
 
 
 class Article(models.Model):
