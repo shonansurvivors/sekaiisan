@@ -232,7 +232,7 @@ class Article(models.Model):
 
             for heritage in heritages:
 
-                print(heritage.regex)
+                # print(heritage.regex)
 
                 if re.search(heritage.regex, self.text):
                     self.heritage.add(heritage)

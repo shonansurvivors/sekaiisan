@@ -4,6 +4,7 @@ from django.contrib.sitemaps.views import sitemap
 from django.urls import path, include
 
 from trip_app.sitemaps import (ArticleListSitemap,
+                               HeritageListSitemap,
                                HeritageArticleListSitemap,
                                BlogArticleListSitemap,
                                CountryHeritageListSitemap,
@@ -11,6 +12,7 @@ from trip_app.sitemaps import (ArticleListSitemap,
 
 sitemaps = {
     'article_list': ArticleListSitemap,
+    'heritage_list': HeritageListSitemap,
     'heritage_article_list': HeritageArticleListSitemap,
     'blog_article_list': BlogArticleListSitemap,
     'country_heritage_list': CountryHeritageListSitemap,

@@ -1,3 +1,4 @@
+import datetime
 from django.contrib.sitemaps import Sitemap
 from django.shortcuts import resolve_url
 from .models import Heritage, Country, Blog
@@ -5,9 +6,10 @@ from .models import Heritage, Country, Blog
 
 class ArticleListSitemap(Sitemap):
 
-    changefreq = 'always'
+    changefreq = 'daily'
     priority = 1.0
     protocol = 'https'
+    lastmod = datetime.datetime.now()
 
     def items(self):
         return ['index']
@@ -16,11 +18,26 @@ class ArticleListSitemap(Sitemap):
         return resolve_url('article_list')
 
 
-class HeritageArticleListSitemap(Sitemap):
+class HeritageListSitemap(Sitemap):
 
-    changefreq = 'always'
+    changefreq = 'daily'
     priority = 1.0
     protocol = 'https'
+    lastmod = datetime.datetime.now()
+
+    def items(self):
+        return ['index']
+
+    def location(self, obj):
+        return resolve_url('heritage_list')
+
+
+class HeritageArticleListSitemap(Sitemap):
+
+    changefreq = 'daily'
+    priority = 1.0
+    protocol = 'https'
+    lastmod = datetime.datetime.now()
 
     def items(self):
         return Heritage.objects.\
@@ -32,9 +49,10 @@ class HeritageArticleListSitemap(Sitemap):
 
 class BlogArticleListSitemap(Sitemap):
 
-    changefreq = 'always'
+    changefreq = 'daily'
     priority = 0.7
     protocol = 'https'
+    lastmod = datetime.datetime.now()
 
     def items(self):
         return Blog.objects.\
@@ -46,9 +64,10 @@ class BlogArticleListSitemap(Sitemap):
 
 class CountryHeritageListSitemap(Sitemap):
 
-    changefreq = 'always'
+    changefreq = 'daily'
     priority = 0.5
     protocol = 'https'
+    lastmod = datetime.datetime.now()
 
     def items(self):
         return Country.objects.\
