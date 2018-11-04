@@ -34,14 +34,18 @@ class Country(models.Model):
     created_at = models.DateTimeField(verbose_name='作成日', auto_now_add=True)
     updated_at = models.DateTimeField(verbose_name='更新日', auto_now=True)
 
+    class Meta:
+        ordering = ('short_name',)
+
     def __str__(self):
-        return self.formal_name
+        return self.short_name
 
 
 class Heritage(models.Model):
     formal_name = models.CharField(verbose_name='名称', max_length=255, db_index=True)
     country = models.ForeignKey(Country, verbose_name='国', on_delete=models.SET_NULL, null=True)
     regex = models.CharField('正規表現', max_length=255, blank=True, null=True)
+    description = models.TextField(verbose_name='説明文', blank=True, null=True)
     created_at = models.DateTimeField(verbose_name='作成日', auto_now_add=True)
     updated_at = models.DateTimeField(verbose_name='更新日', auto_now=True)
 
@@ -272,40 +276,45 @@ class Article(models.Model):
 
         sleep(1)
         r = requests.get(self.url)
-        soup = BeautifulSoup(r.content, 'lxml')
+        soup = BeautifulSoup(r.content, 'html.parser')
 
         try:
             if soup.html.get('data-admin-domain') == '//blog.hatena.ne.jp':
                 self.title = soup.find(class_='entry-title').text
-                self.text = soup.find(class_='entry-content').text
-                self.word_count = len(soup.find(class_='entry-content').text)
-                self.image_count = len(soup.find(class_='entry-content').find_all('img'))
-                if self.image_count:
-                    self.word_count_per_image = self.word_count // self.image_count
 
-                blog_domain = soup.html.get('data-blog-host')
+                try:
+                    self.text = soup.find_all(class_='entry-content')[-1].text
+                    self.word_count = len(soup.find_all(class_='entry-content')[-1].text)
+                    self.image_count = len(soup.find_all(class_='entry-content')[-1].find_all('img'))
+                    if self.image_count:
+                        self.word_count_per_image = self.word_count // self.image_count
 
-                if blog_domain:
+                    blog_domain = soup.html.get('data-blog-host')
 
-                    try:
-                        blog = Blog.objects.get(domain=blog_domain)
+                    if blog_domain:
 
-                    except ObjectDoesNotExist:
-                        blog = Blog()
-                        blog.domain = blog_domain
+                        try:
+                            blog = Blog.objects.get(domain=blog_domain)
 
-                    blog.title = soup.html.get('data-blog-name')
-                    blog.author_name = soup.html.get('data-blog-owner')
-                    blog.author_id = blog.author_name
-                    blog.save()
+                        except ObjectDoesNotExist:
+                            blog = Blog()
+                            blog.domain = blog_domain
 
-                    self.blog = blog
-                    print(f'Blog is created or updated. pk: {blog.pk} title: {blog.title}')
+                        blog.title = soup.html.get('data-blog-name')
+                        blog.author_name = soup.html.get('data-blog-owner')
+                        blog.author_id = blog.author_name
+                        blog.save()
 
-                self.save()
-                print(f'Article is updated. title: {self.title}')
+                        self.blog = blog
+                        print(f'Blog is created or updated. pk: {blog.pk} title: {blog.title}')
 
-                self.update_heritage()
+                    self.save()
+                    print(f'Article is updated. title: {self.title}')
+
+                    self.update_heritage()
+
+                except IndexError:
+                    print(f'BeautifulSoup: IndexError(entry-content is not found)')
 
         except AttributeError:
             print(f'BeautifulSoup: AttributeError')
@@ -323,20 +332,22 @@ class Article(models.Model):
             article.scraping_content()
 
     @classmethod
-    def scraping_url(cls):
+    def scraping_url(cls, url):
 
-        bing = Bing()
-        urls = bing.get_urls(required_url_number=5000)
+        # bing = Bing()
+        # urls = bing.get_urls(required_url_number=5000)
 
-        for url in urls:
+        article = Article()
+        article.url = url
 
-            article = Article()
-            article.url = url
+        try:
+            article.save()
+            print(f'Article is created. url:{url}')
 
-            try:
-                article.save()
-            except IntegrityError:
-                pass
+            article.scraping_content()
+
+        except IntegrityError:
+            print(f'Article is not created.IntegrityError. url: {url}')
 
     @classmethod
     def scraping_uncollected_heritage(cls):
@@ -346,8 +357,10 @@ class Article(models.Model):
         bing = Bing()
         heritages = Heritage.objects.filter(article__isnull=True)
 
-        # 検索ワードが長すぎるとヒットしない？かもしれないので15文字までにしてみる
-        bing.keywords = ['世界遺産', '旅', heritages[random.randrange(len(heritages))].formal_name[:15]]
+        # 検索ワードが長すぎるとヒットしない？かもしれないので10文字までにしてみる
+        bing.keywords = ['世界遺産', '旅', heritages[random.randrange(len(heritages))].formal_name[:10]]
+
+        bing.domains = ['hatenablog.com/entry']
 
         print(f'bing.keywords: {bing.keywords}')
 
@@ -366,6 +379,20 @@ class Article(models.Model):
 
             except IntegrityError:
                 print(f'Article is not created.IntegrityError. url: {url}')
+
+        article_count = Article.objects.filter(word_count_per_image__gt=0, heritage__isnull=False, blog__hidden=False).distinct().count()
+        print(f'article_count:{article_count}')
+
+    @classmethod
+    def cut_text(cls):
+
+        print(f'cut_text run.')
+
+        articles = cls.objects.all()
+
+        for article in articles:
+            article.text = article.text[:200]
+            article.save()
 
     @classmethod
     def delete_garbage(cls):

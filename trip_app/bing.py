@@ -9,8 +9,8 @@ class Bing:
 
     def __init__(self):
 
-        self.keywords = ['世界遺産', '旅行']
-        self.domains = ['hatenablog.jp']
+        self.keywords = ['世界遺産', '旅']
+        self.domains = ['hatenablog.com/entry']
         self.urls = []
 
     def get_urls(self, required_url_number=50):

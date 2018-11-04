@@ -23,266 +23,68 @@
     },
     {
         "model": "trip_app.country",
-        "pk": 166,
+        "pk": 210,
         "fields": {
-            "formal_name": "アンドラ公国",
-            "short_name": "アンドラ",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:50.600Z",
-            "updated_at": "2018-11-03T14:41:05.096Z"
+            "formal_name": "アゼルバイジャン共和国",
+            "short_name": "アゼルバイジャン",
+            "area": "AS",
+            "created_at": "2018-10-07T18:11:55.554Z",
+            "updated_at": "2018-11-03T14:34:05.755Z"
         }
     },
     {
         "model": "trip_app.country",
-        "pk": 167,
+        "pk": 211,
         "fields": {
-            "formal_name": "英国（グレートブリテン及び北アイルランド連合王国）",
-            "short_name": "イギリス",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:50.605Z",
-            "updated_at": "2018-11-03T14:40:55.580Z"
+            "formal_name": "アフガニスタン・イスラム共和国",
+            "short_name": "アフガニスタン",
+            "area": "AS",
+            "created_at": "2018-10-07T18:11:55.565Z",
+            "updated_at": "2018-11-03T14:33:57.505Z"
         }
     },
     {
         "model": "trip_app.country",
-        "pk": 168,
+        "pk": 249,
         "fields": {
-            "formal_name": "スイス連邦",
-            "short_name": "スイス",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:50.705Z",
-            "updated_at": "2018-11-03T14:40:46.007Z"
+            "formal_name": "アメリカ合衆国",
+            "short_name": "アメリカ",
+            "area": "NA",
+            "created_at": "2018-10-07T18:11:58.673Z",
+            "updated_at": "2018-11-03T14:27:14.548Z"
         }
     },
     {
         "model": "trip_app.country",
-        "pk": 169,
+        "pk": 327,
         "fields": {
-            "formal_name": "スペイン",
-            "short_name": "スペイン",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:50.740Z",
-            "updated_at": "2018-11-03T14:40:35.820Z"
+            "formal_name": "アラブ首長国連邦",
+            "short_name": "アラブ首長国連邦",
+            "area": "AS",
+            "created_at": "2018-11-04T12:50:49.562Z",
+            "updated_at": "2018-11-04T12:50:49.562Z"
         }
     },
     {
         "model": "trip_app.country",
-        "pk": 170,
+        "pk": 287,
         "fields": {
-            "formal_name": "フランス共和国",
-            "short_name": "フランス",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:50.880Z",
-            "updated_at": "2018-11-03T14:40:26.797Z"
+            "formal_name": "アルジェリア民主人民共和国",
+            "short_name": "アルジェリア",
+            "area": "AF",
+            "created_at": "2018-10-07T18:12:02.653Z",
+            "updated_at": "2018-11-03T14:18:48.210Z"
         }
     },
     {
         "model": "trip_app.country",
-        "pk": 171,
+        "pk": 267,
         "fields": {
-            "formal_name": "ベルギー王国",
-            "short_name": "ベルギー",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:51.021Z",
-            "updated_at": "2018-11-03T14:40:17.345Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 172,
-        "fields": {
-            "formal_name": "ポルトガル共和国",
-            "short_name": "ポルトガル",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:51.067Z",
-            "updated_at": "2018-11-03T14:40:08.986Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 173,
-        "fields": {
-            "formal_name": "ルクセンブルク大公国",
-            "short_name": "ルクセンブルク",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:51.123Z",
-            "updated_at": "2018-11-03T14:40:00.127Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 174,
-        "fields": {
-            "formal_name": "ウクライナ",
-            "short_name": "ウクライナ",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:52.212Z",
-            "updated_at": "2018-11-03T14:39:49.868Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 175,
-        "fields": {
-            "formal_name": "エストニア共和国",
-            "short_name": "エストニア",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:52.244Z",
-            "updated_at": "2018-11-03T14:39:42.092Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 176,
-        "fields": {
-            "formal_name": "オランダ王国",
-            "short_name": "オランダ",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:52.252Z",
-            "updated_at": "2018-11-03T14:39:34.836Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 177,
-        "fields": {
-            "formal_name": "スウェーデン王国",
-            "short_name": "スウェーデン",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:52.287Z",
-            "updated_at": "2018-11-03T14:39:26.432Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 178,
-        "fields": {
-            "formal_name": "スロバキア共和国",
-            "short_name": "スロバキア",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:52.340Z",
-            "updated_at": "2018-11-03T14:39:18.459Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 179,
-        "fields": {
-            "formal_name": "チェコ共和国",
-            "short_name": "チェコ",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:52.365Z",
-            "updated_at": "2018-11-03T14:39:00.756Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 180,
-        "fields": {
-            "formal_name": "デンマーク王国",
-            "short_name": "デンマーク",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:52.409Z",
-            "updated_at": "2018-11-03T14:38:53.323Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 181,
-        "fields": {
-            "formal_name": "ドイツ連邦共和国",
-            "short_name": "ドイツ",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:52.438Z",
-            "updated_at": "2018-11-03T14:39:10.412Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 182,
-        "fields": {
-            "formal_name": "ノルウェー王国",
-            "short_name": "ノルウェー",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:52.567Z",
-            "updated_at": "2018-11-03T14:38:40.842Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 183,
-        "fields": {
-            "formal_name": "フィンランド共和国",
-            "short_name": "フィンランド",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:52.595Z",
-            "updated_at": "2018-11-03T14:38:32.829Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 184,
-        "fields": {
-            "formal_name": "ベラルーシ共和国",
-            "short_name": "ベラルーシ",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:52.621Z",
-            "updated_at": "2018-11-03T14:38:25.142Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 185,
-        "fields": {
-            "formal_name": "ポーランド共和国",
-            "short_name": "ポーランド",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:52.636Z",
-            "updated_at": "2018-11-03T14:38:16.662Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 186,
-        "fields": {
-            "formal_name": "モルドバ共和国",
-            "short_name": "モルドバ",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:52.689Z",
-            "updated_at": "2018-11-03T14:38:08.553Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 187,
-        "fields": {
-            "formal_name": "ラトビア共和国",
-            "short_name": "ラトビア",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:52.694Z",
-            "updated_at": "2018-11-03T14:38:00.172Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 188,
-        "fields": {
-            "formal_name": "リトアニア共和国",
-            "short_name": "リトアニア",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:52.703Z",
-            "updated_at": "2018-11-03T14:37:49.293Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 189,
-        "fields": {
-            "formal_name": "ロシア",
-            "short_name": "ロシア",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:52.719Z",
-            "updated_at": "2018-11-03T14:37:40.285Z"
+            "formal_name": "アルゼンチン共和国",
+            "short_name": "アルゼンチン",
+            "area": "SA",
+            "created_at": "2018-10-07T18:12:00.112Z",
+            "updated_at": "2018-11-03T14:22:42.121Z"
         }
     },
     {
@@ -309,222 +111,13 @@
     },
     {
         "model": "trip_app.country",
-        "pk": 192,
+        "pk": 166,
         "fields": {
-            "formal_name": "イタリア共和国",
-            "short_name": "イタリア",
+            "formal_name": "アンドラ公国",
+            "short_name": "アンドラ",
             "area": "EU",
-            "created_at": "2018-10-07T18:11:53.919Z",
-            "updated_at": "2018-11-03T14:37:09.298Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 193,
-        "fields": {
-            "formal_name": "オーストリア共和国",
-            "short_name": "オーストリア",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:54.084Z",
-            "updated_at": "2018-11-03T14:36:53.966Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 194,
-        "fields": {
-            "formal_name": "キプロス共和国",
-            "short_name": "キプロス",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:54.116Z",
-            "updated_at": "2018-11-03T14:36:41.803Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 195,
-        "fields": {
-            "formal_name": "ギリシャ共和国",
-            "short_name": "ギリシャ",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:54.129Z",
-            "updated_at": "2018-11-03T14:36:29.176Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 196,
-        "fields": {
-            "formal_name": "グルジア",
-            "short_name": "ジョージア",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:54.189Z",
-            "updated_at": "2018-11-03T14:36:09.614Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 197,
-        "fields": {
-            "formal_name": "クロアチア共和国",
-            "short_name": "クロアチア",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:54.199Z",
-            "updated_at": "2018-11-03T14:35:54.789Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 198,
-        "fields": {
-            "formal_name": "サンマリノ共和国",
-            "short_name": "サンマリノ",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:54.226Z",
-            "updated_at": "2018-11-03T14:35:46.909Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 199,
-        "fields": {
-            "formal_name": "スロベニア共和国",
-            "short_name": "スロベニア",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:54.231Z",
-            "updated_at": "2018-11-03T14:35:37.243Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 200,
-        "fields": {
-            "formal_name": "セルビア共和国",
-            "short_name": "セルビア",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:54.244Z",
-            "updated_at": "2018-11-03T14:35:28.250Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 201,
-        "fields": {
-            "formal_name": "トルコ共和国",
-            "short_name": "トルコ",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:54.265Z",
-            "updated_at": "2018-11-03T14:35:21.542Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 202,
-        "fields": {
-            "formal_name": "バチカン市国",
-            "short_name": "バチカン",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:54.321Z",
-            "updated_at": "2018-11-03T14:35:11.861Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 203,
-        "fields": {
-            "formal_name": "ハンガリー",
-            "short_name": "ハンガリー",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:54.331Z",
-            "updated_at": "2018-11-03T14:35:02.520Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 204,
-        "fields": {
-            "formal_name": "ブルガリア共和国",
-            "short_name": "ブルガリア",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:54.363Z",
-            "updated_at": "2018-11-03T14:34:54.664Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 205,
-        "fields": {
-            "formal_name": "ボスニア・ヘルツェゴビナ",
-            "short_name": "ボスニア・ヘルツェゴビナ",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:54.396Z",
-            "updated_at": "2018-11-03T14:34:47.489Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 206,
-        "fields": {
-            "formal_name": "マケドニア旧ユーゴスラビア共和国",
-            "short_name": "マケドニア",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:54.409Z",
-            "updated_at": "2018-11-03T14:34:38.483Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 207,
-        "fields": {
-            "formal_name": "マルタ共和国",
-            "short_name": "マルタ",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:54.414Z",
-            "updated_at": "2018-11-03T14:34:30.344Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 208,
-        "fields": {
-            "formal_name": "モンテネグロ",
-            "short_name": "モンテネグロ",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:54.426Z",
-            "updated_at": "2018-11-03T14:34:22.156Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 209,
-        "fields": {
-            "formal_name": "ルーマニア",
-            "short_name": "ルーマニア",
-            "area": "EU",
-            "created_at": "2018-10-07T18:11:54.439Z",
-            "updated_at": "2018-11-03T14:34:13.007Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 210,
-        "fields": {
-            "formal_name": "アゼルバイジャン共和国",
-            "short_name": "アゼルバイジャン",
-            "area": "AS",
-            "created_at": "2018-10-07T18:11:55.554Z",
-            "updated_at": "2018-11-03T14:34:05.755Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 211,
-        "fields": {
-            "formal_name": "アフガニスタン・イスラム共和国",
-            "short_name": "アフガニスタン",
-            "area": "AS",
-            "created_at": "2018-10-07T18:11:55.565Z",
-            "updated_at": "2018-11-03T14:33:57.505Z"
+            "created_at": "2018-10-07T18:11:50.600Z",
+            "updated_at": "2018-11-03T14:41:05.096Z"
         }
     },
     {
@@ -540,6 +133,17 @@
     },
     {
         "model": "trip_app.country",
+        "pk": 167,
+        "fields": {
+            "formal_name": "英国（グレートブリテン及び北アイルランド連合王国）",
+            "short_name": "イギリス",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:50.605Z",
+            "updated_at": "2018-11-03T14:40:55.580Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
         "pk": 213,
         "fields": {
             "formal_name": "イスラエル国",
@@ -547,6 +151,17 @@
             "area": "AS",
             "created_at": "2018-10-07T18:11:55.587Z",
             "updated_at": "2018-11-03T14:33:42.471Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 192,
+        "fields": {
+            "formal_name": "イタリア共和国",
+            "short_name": "イタリア",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:53.919Z",
+            "updated_at": "2018-11-03T14:37:09.298Z"
         }
     },
     {
@@ -584,193 +199,6 @@
     },
     {
         "model": "trip_app.country",
-        "pk": 217,
-        "fields": {
-            "formal_name": "ウズベキスタン共和国",
-            "short_name": "ウズベキスタン",
-            "area": "AS",
-            "created_at": "2018-10-07T18:11:55.816Z",
-            "updated_at": "2018-11-03T14:33:10.343Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 218,
-        "fields": {
-            "formal_name": "エルサレム（ヨルダン・ハシェミット王国による申請遺産）",
-            "short_name": "エルサレム",
-            "area": "AS",
-            "created_at": "2018-10-07T18:11:55.832Z",
-            "updated_at": "2018-11-03T14:33:02.451Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 219,
-        "fields": {
-            "formal_name": "オマーン国",
-            "short_name": "オマーン",
-            "area": "AS",
-            "created_at": "2018-10-07T18:11:55.837Z",
-            "updated_at": "2018-11-03T14:32:55.023Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 220,
-        "fields": {
-            "formal_name": "カザフスタン共和国",
-            "short_name": "カザフスタン",
-            "area": "AS",
-            "created_at": "2018-10-07T18:11:55.854Z",
-            "updated_at": "2018-11-03T14:32:47.514Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 221,
-        "fields": {
-            "formal_name": "カタール国",
-            "short_name": "カタール",
-            "area": "AS",
-            "created_at": "2018-10-07T18:11:55.871Z",
-            "updated_at": "2018-11-03T14:32:39.929Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 222,
-        "fields": {
-            "formal_name": "キルギス共和国",
-            "short_name": "キルギス",
-            "area": "AS",
-            "created_at": "2018-10-07T18:11:55.876Z",
-            "updated_at": "2018-11-03T14:32:32.904Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 223,
-        "fields": {
-            "formal_name": "サウジアラビア王国",
-            "short_name": "サウジアラビア",
-            "area": "AS",
-            "created_at": "2018-10-07T18:11:55.890Z",
-            "updated_at": "2018-11-03T14:32:26.163Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 224,
-        "fields": {
-            "formal_name": "シリア・アラブ共和国",
-            "short_name": "シリア",
-            "area": "AS",
-            "created_at": "2018-10-07T18:11:55.908Z",
-            "updated_at": "2018-11-03T14:32:19.199Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 225,
-        "fields": {
-            "formal_name": "スリランカ民主社会主義共和国",
-            "short_name": "スリランカ",
-            "area": "AS",
-            "created_at": "2018-10-07T18:11:55.929Z",
-            "updated_at": "2018-11-03T14:32:12.979Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 226,
-        "fields": {
-            "formal_name": "タジキスタン共和国",
-            "short_name": "タジキスタン",
-            "area": "AS",
-            "created_at": "2018-10-07T18:11:55.956Z",
-            "updated_at": "2018-11-03T14:32:06.245Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 227,
-        "fields": {
-            "formal_name": "トルクメニスタン",
-            "short_name": "トルクメニスタン",
-            "area": "AS",
-            "created_at": "2018-10-07T18:11:55.964Z",
-            "updated_at": "2018-11-03T14:31:51.069Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 228,
-        "fields": {
-            "formal_name": "ネパール連邦民主共和国",
-            "short_name": "ネパール",
-            "area": "AS",
-            "created_at": "2018-10-07T18:11:55.976Z",
-            "updated_at": "2018-11-03T14:31:08.948Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 229,
-        "fields": {
-            "formal_name": "パキスタン・イスラム共和国",
-            "short_name": "パキスタン",
-            "area": "AS",
-            "created_at": "2018-10-07T18:11:55.989Z",
-            "updated_at": "2018-11-03T14:31:00.121Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 230,
-        "fields": {
-            "formal_name": "パレスチナ自治政府",
-            "short_name": "パレスチナ",
-            "area": "AS",
-            "created_at": "2018-10-07T18:11:56.009Z",
-            "updated_at": "2018-11-03T14:30:42.208Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 231,
-        "fields": {
-            "formal_name": "バーレーン王国",
-            "short_name": "バーレーン",
-            "area": "AS",
-            "created_at": "2018-10-07T18:11:56.017Z",
-            "updated_at": "2018-11-03T14:30:33.280Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 232,
-        "fields": {
-            "formal_name": "ヨルダン・ハシェミット王国",
-            "short_name": "ヨルダン",
-            "area": "AS",
-            "created_at": "2018-10-07T18:11:56.028Z",
-            "updated_at": "2018-11-03T14:30:23.557Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 233,
-        "fields": {
-            "formal_name": "レバノン共和国",
-            "short_name": "レバノン",
-            "area": "AS",
-            "created_at": "2018-10-07T18:11:56.051Z",
-            "updated_at": "2018-11-03T14:30:11.979Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
         "pk": 234,
         "fields": {
             "formal_name": "インドネシア共和国",
@@ -782,365 +210,35 @@
     },
     {
         "model": "trip_app.country",
-        "pk": 235,
+        "pk": 288,
         "fields": {
-            "formal_name": "カンボジア王国",
-            "short_name": "カンボジア",
+            "formal_name": "ウガンダ共和国",
+            "short_name": "ウガンダ",
+            "area": "AF",
+            "created_at": "2018-10-07T18:12:02.683Z",
+            "updated_at": "2018-11-03T14:18:15.504Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 174,
+        "fields": {
+            "formal_name": "ウクライナ",
+            "short_name": "ウクライナ",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:52.212Z",
+            "updated_at": "2018-11-03T14:39:49.868Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 217,
+        "fields": {
+            "formal_name": "ウズベキスタン共和国",
+            "short_name": "ウズベキスタン",
             "area": "AS",
-            "created_at": "2018-10-07T18:11:57.194Z",
-            "updated_at": "2018-11-03T14:29:54.826Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 236,
-        "fields": {
-            "formal_name": "北朝鮮（朝鮮民主主義人民共和国）",
-            "short_name": "北朝鮮",
-            "area": "AS",
-            "created_at": "2018-10-07T18:11:57.202Z",
-            "updated_at": "2018-11-03T14:29:46.228Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 237,
-        "fields": {
-            "formal_name": "シンガポール共和国",
-            "short_name": "シンガポール",
-            "area": "AS",
-            "created_at": "2018-10-07T18:11:57.211Z",
-            "updated_at": "2018-11-03T14:29:37.910Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 238,
-        "fields": {
-            "formal_name": "タイ王国",
-            "short_name": "タイ",
-            "area": "AS",
-            "created_at": "2018-10-07T18:11:57.217Z",
-            "updated_at": "2018-11-03T14:29:29.315Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 239,
-        "fields": {
-            "formal_name": "大韓民国",
-            "short_name": "韓国",
-            "area": "AS",
-            "created_at": "2018-10-07T18:11:57.237Z",
-            "updated_at": "2018-11-03T14:29:18.293Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 240,
-        "fields": {
-            "formal_name": "中華人民共和国",
-            "short_name": "中国",
-            "area": "AS",
-            "created_at": "2018-10-07T18:11:57.273Z",
-            "updated_at": "2018-11-03T14:29:05.233Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 241,
-        "fields": {
-            "formal_name": "日本国",
-            "short_name": "日本",
-            "area": "AS",
-            "created_at": "2018-10-07T18:11:57.432Z",
-            "updated_at": "2018-11-03T14:03:40.923Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 242,
-        "fields": {
-            "formal_name": "バングラデシュ人民共和国",
-            "short_name": "バングラデシュ",
-            "area": "AS",
-            "created_at": "2018-10-07T18:11:57.490Z",
-            "updated_at": "2018-11-03T14:28:48.309Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 243,
-        "fields": {
-            "formal_name": "フィリピン共和国",
-            "short_name": "フィリピン",
-            "area": "AS",
-            "created_at": "2018-10-07T18:11:57.501Z",
-            "updated_at": "2018-11-03T14:28:38.528Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 244,
-        "fields": {
-            "formal_name": "ベトナム社会主義共和国",
-            "short_name": "ベトナム",
-            "area": "AS",
-            "created_at": "2018-10-07T18:11:57.521Z",
-            "updated_at": "2018-11-03T14:28:27.358Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 245,
-        "fields": {
-            "formal_name": "マレーシア",
-            "short_name": "マレーシア",
-            "area": "AS",
-            "created_at": "2018-10-07T18:11:57.548Z",
-            "updated_at": "2018-11-03T14:28:12.706Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 246,
-        "fields": {
-            "formal_name": "ミャンマー連邦共和国",
-            "short_name": "ミャンマー",
-            "area": "AS",
-            "created_at": "2018-10-07T18:11:57.564Z",
-            "updated_at": "2018-11-03T14:28:03.112Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 247,
-        "fields": {
-            "formal_name": "モンゴル国",
-            "short_name": "モンゴル",
-            "area": "AS",
-            "created_at": "2018-10-07T18:11:57.569Z",
-            "updated_at": "2018-11-03T14:27:38.551Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 248,
-        "fields": {
-            "formal_name": "ラオス人民民主共和国",
-            "short_name": "ラオス",
-            "area": "AS",
-            "created_at": "2018-10-07T18:11:57.582Z",
-            "updated_at": "2018-11-03T14:27:29.113Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 249,
-        "fields": {
-            "formal_name": "アメリカ合衆国",
-            "short_name": "アメリカ",
-            "area": "NA",
-            "created_at": "2018-10-07T18:11:58.673Z",
-            "updated_at": "2018-11-03T14:27:14.548Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 250,
-        "fields": {
-            "formal_name": "エルサルバドル共和国",
-            "short_name": "エルサルバドル",
-            "area": "NA",
-            "created_at": "2018-10-07T18:11:58.741Z",
-            "updated_at": "2018-11-03T14:27:04.047Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 251,
-        "fields": {
-            "formal_name": "カナダ",
-            "short_name": "カナダ",
-            "area": "NA",
-            "created_at": "2018-10-07T18:11:58.748Z",
-            "updated_at": "2018-11-03T14:26:49.541Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 252,
-        "fields": {
-            "formal_name": "キューバ共和国",
-            "short_name": "キューバ",
-            "area": "NA",
-            "created_at": "2018-10-07T18:11:58.811Z",
-            "updated_at": "2018-11-03T14:26:29.841Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 253,
-        "fields": {
-            "formal_name": "グアテマラ共和国",
-            "short_name": "グアテマラ",
-            "area": "NA",
-            "created_at": "2018-10-07T18:11:58.843Z",
-            "updated_at": "2018-11-03T14:26:11.235Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 254,
-        "fields": {
-            "formal_name": "コスタリカ共和国",
-            "short_name": "コスタリカ",
-            "area": "NA",
-            "created_at": "2018-10-07T18:11:58.855Z",
-            "updated_at": "2018-11-03T14:26:02.568Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 255,
-        "fields": {
-            "formal_name": "ジャマイカ",
-            "short_name": "ジャマイカ",
-            "area": "NA",
-            "created_at": "2018-10-07T18:11:58.870Z",
-            "updated_at": "2018-11-03T14:25:50.563Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 256,
-        "fields": {
-            "formal_name": "セントクリストファー・ネーヴィス",
-            "short_name": "セントクリストファー・ネーヴィス",
-            "area": "NA",
-            "created_at": "2018-10-07T18:11:58.875Z",
-            "updated_at": "2018-11-03T14:25:40.956Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 257,
-        "fields": {
-            "formal_name": "セントルシア",
-            "short_name": "セントルシア",
-            "area": "NA",
-            "created_at": "2018-10-07T18:11:58.880Z",
-            "updated_at": "2018-11-03T14:25:02.617Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 258,
-        "fields": {
-            "formal_name": "ドミニカ共和国",
-            "short_name": "ドミニカ共和国",
-            "area": "NA",
-            "created_at": "2018-10-07T18:11:58.885Z",
-            "updated_at": "2018-11-03T14:24:51.255Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 259,
-        "fields": {
-            "formal_name": "ドミニカ国",
-            "short_name": "ドミニカ国",
-            "area": "NA",
-            "created_at": "2018-10-07T18:11:58.891Z",
-            "updated_at": "2018-11-03T14:24:41.068Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 260,
-        "fields": {
-            "formal_name": "ニカラグア共和国",
-            "short_name": "ニカラグア",
-            "area": "NA",
-            "created_at": "2018-10-07T18:11:58.896Z",
-            "updated_at": "2018-11-03T14:24:07.064Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 261,
-        "fields": {
-            "formal_name": "ハイチ共和国",
-            "short_name": "ハイチ",
-            "area": "NA",
-            "created_at": "2018-10-07T18:11:58.905Z",
-            "updated_at": "2018-11-03T14:23:53.875Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 262,
-        "fields": {
-            "formal_name": "パナマ共和国",
-            "short_name": "パナマ",
-            "area": "NA",
-            "created_at": "2018-10-07T18:11:58.910Z",
-            "updated_at": "2018-11-03T14:23:42.386Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 263,
-        "fields": {
-            "formal_name": "バルバドス",
-            "short_name": "バルバドス",
-            "area": "NA",
-            "created_at": "2018-10-07T18:11:58.928Z",
-            "updated_at": "2018-11-03T14:23:33.281Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 264,
-        "fields": {
-            "formal_name": "ベリーズ",
-            "short_name": "ベリーズ",
-            "area": "NA",
-            "created_at": "2018-10-07T18:11:58.933Z",
-            "updated_at": "2018-11-03T14:23:22.893Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 265,
-        "fields": {
-            "formal_name": "ホンジュラス共和国",
-            "short_name": "ホンジュラス",
-            "area": "NA",
-            "created_at": "2018-10-07T18:11:58.937Z",
-            "updated_at": "2018-11-03T14:23:13.691Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 266,
-        "fields": {
-            "formal_name": "メキシコ合衆国",
-            "short_name": "メキシコ",
-            "area": "NA",
-            "created_at": "2018-10-07T18:11:58.944Z",
-            "updated_at": "2018-11-03T14:22:53.983Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 267,
-        "fields": {
-            "formal_name": "アルゼンチン共和国",
-            "short_name": "アルゼンチン",
-            "area": "SA",
-            "created_at": "2018-10-07T18:12:00.112Z",
-            "updated_at": "2018-11-03T14:22:42.121Z"
+            "created_at": "2018-10-07T18:11:55.816Z",
+            "updated_at": "2018-11-03T14:33:10.343Z"
         }
     },
     {
@@ -1167,215 +265,6 @@
     },
     {
         "model": "trip_app.country",
-        "pk": 270,
-        "fields": {
-            "formal_name": "コロンビア共和国",
-            "short_name": "コロンビア",
-            "area": "SA",
-            "created_at": "2018-10-07T18:12:00.179Z",
-            "updated_at": "2018-11-03T14:22:09.721Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 271,
-        "fields": {
-            "formal_name": "スリナム共和国",
-            "short_name": "スリナム",
-            "area": "SA",
-            "created_at": "2018-10-07T18:12:00.208Z",
-            "updated_at": "2018-11-03T14:22:00.085Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 272,
-        "fields": {
-            "formal_name": "チリ共和国",
-            "short_name": "チリ",
-            "area": "SA",
-            "created_at": "2018-10-07T18:12:00.215Z",
-            "updated_at": "2018-11-03T14:21:50.048Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 273,
-        "fields": {
-            "formal_name": "パラグアイ共和国",
-            "short_name": "パラグアイ",
-            "area": "SA",
-            "created_at": "2018-10-07T18:12:00.236Z",
-            "updated_at": "2018-11-03T14:21:37.932Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 274,
-        "fields": {
-            "formal_name": "ブラジル連邦共和国",
-            "short_name": "ブラジル",
-            "area": "SA",
-            "created_at": "2018-10-07T18:12:00.242Z",
-            "updated_at": "2018-11-03T14:21:17.191Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 275,
-        "fields": {
-            "formal_name": "ベネズエラ・ボリバル共和国",
-            "short_name": "ベネズエラ",
-            "area": "SA",
-            "created_at": "2018-10-07T18:12:00.307Z",
-            "updated_at": "2018-11-03T14:21:06.974Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 276,
-        "fields": {
-            "formal_name": "ペルー共和国",
-            "short_name": "ペルー",
-            "area": "SA",
-            "created_at": "2018-10-07T18:12:00.321Z",
-            "updated_at": "2018-11-03T14:20:54.372Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 277,
-        "fields": {
-            "formal_name": "ボリビア多民族国",
-            "short_name": "ボリビア",
-            "area": "SA",
-            "created_at": "2018-10-07T18:12:00.364Z",
-            "updated_at": "2018-11-03T14:20:42.562Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 278,
-        "fields": {
-            "formal_name": "オーストラリア連邦",
-            "short_name": "オーストラリア",
-            "area": "OC",
-            "created_at": "2018-10-07T18:12:01.438Z",
-            "updated_at": "2018-11-03T14:20:31.960Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 279,
-        "fields": {
-            "formal_name": "キリバス共和国",
-            "short_name": "キリバス",
-            "area": "OC",
-            "created_at": "2018-10-07T18:12:01.509Z",
-            "updated_at": "2018-11-03T14:20:17.263Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 280,
-        "fields": {
-            "formal_name": "ソロモン諸島",
-            "short_name": "ソロモン諸島",
-            "area": "OC",
-            "created_at": "2018-10-07T18:12:01.515Z",
-            "updated_at": "2018-11-03T14:20:06.067Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 281,
-        "fields": {
-            "formal_name": "ニュージーランド",
-            "short_name": "ニュージーランド",
-            "area": "OC",
-            "created_at": "2018-10-07T18:12:01.520Z",
-            "updated_at": "2018-11-03T14:19:54.269Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 282,
-        "fields": {
-            "formal_name": "バヌアツ共和国",
-            "short_name": "バヌアツ",
-            "area": "OC",
-            "created_at": "2018-10-07T18:12:01.531Z",
-            "updated_at": "2018-11-03T14:19:43.212Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 283,
-        "fields": {
-            "formal_name": "パプアニューギニア独立国",
-            "short_name": "パプアニューギニア",
-            "area": "OC",
-            "created_at": "2018-10-07T18:12:01.536Z",
-            "updated_at": "2018-11-03T14:19:32.077Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 284,
-        "fields": {
-            "formal_name": "パラオ共和国",
-            "short_name": "パラオ",
-            "area": "OC",
-            "created_at": "2018-10-07T18:12:01.542Z",
-            "updated_at": "2018-11-03T14:19:21.641Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 285,
-        "fields": {
-            "formal_name": "フィジー共和国",
-            "short_name": "フィジー",
-            "area": "OC",
-            "created_at": "2018-10-07T18:12:01.547Z",
-            "updated_at": "2018-11-03T14:19:12.142Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 286,
-        "fields": {
-            "formal_name": "マーシャル諸島共和国",
-            "short_name": "マーシャル諸島",
-            "area": "OC",
-            "created_at": "2018-10-07T18:12:01.553Z",
-            "updated_at": "2018-11-03T14:19:01.573Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 287,
-        "fields": {
-            "formal_name": "アルジェリア民主人民共和国",
-            "short_name": "アルジェリア",
-            "area": "AF",
-            "created_at": "2018-10-07T18:12:02.653Z",
-            "updated_at": "2018-11-03T14:18:48.210Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 288,
-        "fields": {
-            "formal_name": "ウガンダ共和国",
-            "short_name": "ウガンダ",
-            "area": "AF",
-            "created_at": "2018-10-07T18:12:02.683Z",
-            "updated_at": "2018-11-03T14:18:15.504Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
         "pk": 289,
         "fields": {
             "formal_name": "エジプト・アラブ共和国",
@@ -1383,6 +272,17 @@
             "area": "AF",
             "created_at": "2018-10-07T18:12:02.695Z",
             "updated_at": "2018-11-03T14:18:03.287Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 175,
+        "fields": {
+            "formal_name": "エストニア共和国",
+            "short_name": "エストニア",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:52.244Z",
+            "updated_at": "2018-11-03T14:39:42.092Z"
         }
     },
     {
@@ -1398,13 +298,123 @@
     },
     {
         "model": "trip_app.country",
-        "pk": 291,
+        "pk": 250,
         "fields": {
-            "formal_name": "ガーナ共和国",
-            "short_name": "ガーナ",
+            "formal_name": "エルサルバドル共和国",
+            "short_name": "エルサルバドル",
+            "area": "NA",
+            "created_at": "2018-10-07T18:11:58.741Z",
+            "updated_at": "2018-11-03T14:27:04.047Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 218,
+        "fields": {
+            "formal_name": "エルサレム（ヨルダン・ハシェミット王国による申請遺産）",
+            "short_name": "エルサレム",
+            "area": "AS",
+            "created_at": "2018-10-07T18:11:55.832Z",
+            "updated_at": "2018-11-03T14:33:02.451Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 219,
+        "fields": {
+            "formal_name": "オマーン国",
+            "short_name": "オマーン",
+            "area": "AS",
+            "created_at": "2018-10-07T18:11:55.837Z",
+            "updated_at": "2018-11-03T14:32:55.023Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 176,
+        "fields": {
+            "formal_name": "オランダ王国",
+            "short_name": "オランダ",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:52.252Z",
+            "updated_at": "2018-11-03T14:39:34.836Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 278,
+        "fields": {
+            "formal_name": "オーストラリア連邦",
+            "short_name": "オーストラリア",
+            "area": "OC",
+            "created_at": "2018-10-07T18:12:01.438Z",
+            "updated_at": "2018-11-03T14:20:31.960Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 193,
+        "fields": {
+            "formal_name": "オーストリア共和国",
+            "short_name": "オーストリア",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:54.084Z",
+            "updated_at": "2018-11-03T14:36:53.966Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 220,
+        "fields": {
+            "formal_name": "カザフスタン共和国",
+            "short_name": "カザフスタン",
+            "area": "AS",
+            "created_at": "2018-10-07T18:11:55.854Z",
+            "updated_at": "2018-11-03T14:32:47.514Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 221,
+        "fields": {
+            "formal_name": "カタール国",
+            "short_name": "カタール",
+            "area": "AS",
+            "created_at": "2018-10-07T18:11:55.871Z",
+            "updated_at": "2018-11-03T14:32:39.929Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 251,
+        "fields": {
+            "formal_name": "カナダ",
+            "short_name": "カナダ",
+            "area": "NA",
+            "created_at": "2018-10-07T18:11:58.748Z",
+            "updated_at": "2018-11-03T14:26:49.541Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 294,
+        "fields": {
+            "formal_name": "カメルーン共和国",
+            "short_name": "カメルーン",
             "area": "AF",
-            "created_at": "2018-10-07T18:12:02.740Z",
-            "updated_at": "2018-11-03T14:17:44.843Z"
+            "created_at": "2018-10-07T18:12:02.758Z",
+            "updated_at": "2018-11-03T14:17:16.163Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 235,
+        "fields": {
+            "formal_name": "カンボジア王国",
+            "short_name": "カンボジア",
+            "area": "AS",
+            "created_at": "2018-10-07T18:11:57.194Z",
+            "updated_at": "2018-11-03T14:29:54.826Z"
         }
     },
     {
@@ -1431,17 +441,6 @@
     },
     {
         "model": "trip_app.country",
-        "pk": 294,
-        "fields": {
-            "formal_name": "カメルーン共和国",
-            "short_name": "カメルーン",
-            "area": "AF",
-            "created_at": "2018-10-07T18:12:02.758Z",
-            "updated_at": "2018-11-03T14:17:16.163Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
         "pk": 295,
         "fields": {
             "formal_name": "ガンビア共和国",
@@ -1449,6 +448,61 @@
             "area": "AF",
             "created_at": "2018-10-07T18:12:02.765Z",
             "updated_at": "2018-11-03T14:17:04.460Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 291,
+        "fields": {
+            "formal_name": "ガーナ共和国",
+            "short_name": "ガーナ",
+            "area": "AF",
+            "created_at": "2018-10-07T18:12:02.740Z",
+            "updated_at": "2018-11-03T14:17:44.843Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 194,
+        "fields": {
+            "formal_name": "キプロス共和国",
+            "short_name": "キプロス",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:54.116Z",
+            "updated_at": "2018-11-03T14:36:41.803Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 252,
+        "fields": {
+            "formal_name": "キューバ共和国",
+            "short_name": "キューバ",
+            "area": "NA",
+            "created_at": "2018-10-07T18:11:58.811Z",
+            "updated_at": "2018-11-03T14:26:29.841Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 279,
+        "fields": {
+            "formal_name": "キリバス共和国",
+            "short_name": "キリバス",
+            "area": "OC",
+            "created_at": "2018-10-07T18:12:01.509Z",
+            "updated_at": "2018-11-03T14:20:17.263Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 222,
+        "fields": {
+            "formal_name": "キルギス共和国",
+            "short_name": "キルギス",
+            "area": "AS",
+            "created_at": "2018-10-07T18:11:55.876Z",
+            "updated_at": "2018-11-03T14:32:32.904Z"
         }
     },
     {
@@ -1464,6 +518,39 @@
     },
     {
         "model": "trip_app.country",
+        "pk": 195,
+        "fields": {
+            "formal_name": "ギリシャ共和国",
+            "short_name": "ギリシャ",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:54.129Z",
+            "updated_at": "2018-11-03T14:36:29.176Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 197,
+        "fields": {
+            "formal_name": "クロアチア共和国",
+            "short_name": "クロアチア",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:54.199Z",
+            "updated_at": "2018-11-03T14:35:54.789Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 253,
+        "fields": {
+            "formal_name": "グアテマラ共和国",
+            "short_name": "グアテマラ",
+            "area": "NA",
+            "created_at": "2018-10-07T18:11:58.843Z",
+            "updated_at": "2018-11-03T14:26:11.235Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
         "pk": 297,
         "fields": {
             "formal_name": "ケニア共和国",
@@ -1475,13 +562,24 @@
     },
     {
         "model": "trip_app.country",
-        "pk": 298,
+        "pk": 254,
         "fields": {
-            "formal_name": "コートジボワール共和国",
-            "short_name": "コートジボワール",
-            "area": "AF",
-            "created_at": "2018-10-07T18:12:02.803Z",
-            "updated_at": "2018-11-03T14:16:36.070Z"
+            "formal_name": "コスタリカ共和国",
+            "short_name": "コスタリカ",
+            "area": "NA",
+            "created_at": "2018-10-07T18:11:58.855Z",
+            "updated_at": "2018-11-03T14:26:02.568Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 270,
+        "fields": {
+            "formal_name": "コロンビア共和国",
+            "short_name": "コロンビア",
+            "area": "SA",
+            "created_at": "2018-10-07T18:12:00.179Z",
+            "updated_at": "2018-11-03T14:22:09.721Z"
         }
     },
     {
@@ -1508,6 +606,39 @@
     },
     {
         "model": "trip_app.country",
+        "pk": 298,
+        "fields": {
+            "formal_name": "コートジボワール共和国",
+            "short_name": "コートジボワール",
+            "area": "AF",
+            "created_at": "2018-10-07T18:12:02.803Z",
+            "updated_at": "2018-11-03T14:16:36.070Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 223,
+        "fields": {
+            "formal_name": "サウジアラビア王国",
+            "short_name": "サウジアラビア",
+            "area": "AS",
+            "created_at": "2018-10-07T18:11:55.890Z",
+            "updated_at": "2018-11-03T14:32:26.163Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 198,
+        "fields": {
+            "formal_name": "サンマリノ共和国",
+            "short_name": "サンマリノ",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:54.226Z",
+            "updated_at": "2018-11-03T14:35:46.909Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
         "pk": 301,
         "fields": {
             "formal_name": "ザンビア共和国",
@@ -1515,6 +646,50 @@
             "area": "AF",
             "created_at": "2018-10-07T18:12:02.844Z",
             "updated_at": "2018-11-03T14:15:41.850Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 224,
+        "fields": {
+            "formal_name": "シリア・アラブ共和国",
+            "short_name": "シリア",
+            "area": "AS",
+            "created_at": "2018-10-07T18:11:55.908Z",
+            "updated_at": "2018-11-03T14:32:19.199Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 237,
+        "fields": {
+            "formal_name": "シンガポール共和国",
+            "short_name": "シンガポール",
+            "area": "AS",
+            "created_at": "2018-10-07T18:11:57.211Z",
+            "updated_at": "2018-11-03T14:29:37.910Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 255,
+        "fields": {
+            "formal_name": "ジャマイカ",
+            "short_name": "ジャマイカ",
+            "area": "NA",
+            "created_at": "2018-10-07T18:11:58.870Z",
+            "updated_at": "2018-11-03T14:25:50.563Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 196,
+        "fields": {
+            "formal_name": "グルジア",
+            "short_name": "ジョージア",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:54.189Z",
+            "updated_at": "2018-11-03T14:36:09.614Z"
         }
     },
     {
@@ -1530,6 +705,83 @@
     },
     {
         "model": "trip_app.country",
+        "pk": 168,
+        "fields": {
+            "formal_name": "スイス連邦",
+            "short_name": "スイス",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:50.705Z",
+            "updated_at": "2018-11-03T14:40:46.007Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 177,
+        "fields": {
+            "formal_name": "スウェーデン王国",
+            "short_name": "スウェーデン",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:52.287Z",
+            "updated_at": "2018-11-03T14:39:26.432Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 169,
+        "fields": {
+            "formal_name": "スペイン",
+            "short_name": "スペイン",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:50.740Z",
+            "updated_at": "2018-11-03T14:40:35.820Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 271,
+        "fields": {
+            "formal_name": "スリナム共和国",
+            "short_name": "スリナム",
+            "area": "SA",
+            "created_at": "2018-10-07T18:12:00.208Z",
+            "updated_at": "2018-11-03T14:22:00.085Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 225,
+        "fields": {
+            "formal_name": "スリランカ民主社会主義共和国",
+            "short_name": "スリランカ",
+            "area": "AS",
+            "created_at": "2018-10-07T18:11:55.929Z",
+            "updated_at": "2018-11-03T14:32:12.979Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 178,
+        "fields": {
+            "formal_name": "スロバキア共和国",
+            "short_name": "スロバキア",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:52.340Z",
+            "updated_at": "2018-11-03T14:39:18.459Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 199,
+        "fields": {
+            "formal_name": "スロベニア共和国",
+            "short_name": "スロベニア",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:54.231Z",
+            "updated_at": "2018-11-03T14:35:37.243Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
         "pk": 303,
         "fields": {
             "formal_name": "スーダン共和国",
@@ -1537,17 +789,6 @@
             "area": "AF",
             "created_at": "2018-10-07T18:12:02.868Z",
             "updated_at": "2018-11-03T14:15:21.778Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
-        "pk": 304,
-        "fields": {
-            "formal_name": "セーシェル共和国",
-            "short_name": "セーシェル",
-            "area": "AF",
-            "created_at": "2018-10-07T18:12:02.880Z",
-            "updated_at": "2018-11-03T14:15:11.911Z"
         }
     },
     {
@@ -1563,6 +804,83 @@
     },
     {
         "model": "trip_app.country",
+        "pk": 200,
+        "fields": {
+            "formal_name": "セルビア共和国",
+            "short_name": "セルビア",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:54.244Z",
+            "updated_at": "2018-11-03T14:35:28.250Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 256,
+        "fields": {
+            "formal_name": "セントクリストファー・ネーヴィス",
+            "short_name": "セントクリストファー・ネーヴィス",
+            "area": "NA",
+            "created_at": "2018-10-07T18:11:58.875Z",
+            "updated_at": "2018-11-03T14:25:40.956Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 257,
+        "fields": {
+            "formal_name": "セントルシア",
+            "short_name": "セントルシア",
+            "area": "NA",
+            "created_at": "2018-10-07T18:11:58.880Z",
+            "updated_at": "2018-11-03T14:25:02.617Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 304,
+        "fields": {
+            "formal_name": "セーシェル共和国",
+            "short_name": "セーシェル",
+            "area": "AF",
+            "created_at": "2018-10-07T18:12:02.880Z",
+            "updated_at": "2018-11-03T14:15:11.911Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 280,
+        "fields": {
+            "formal_name": "ソロモン諸島",
+            "short_name": "ソロモン諸島",
+            "area": "OC",
+            "created_at": "2018-10-07T18:12:01.515Z",
+            "updated_at": "2018-11-03T14:20:06.067Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 238,
+        "fields": {
+            "formal_name": "タイ王国",
+            "short_name": "タイ",
+            "area": "AS",
+            "created_at": "2018-10-07T18:11:57.217Z",
+            "updated_at": "2018-11-03T14:29:29.315Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 226,
+        "fields": {
+            "formal_name": "タジキスタン共和国",
+            "short_name": "タジキスタン",
+            "area": "AS",
+            "created_at": "2018-10-07T18:11:55.956Z",
+            "updated_at": "2018-11-03T14:32:06.245Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
         "pk": 306,
         "fields": {
             "formal_name": "タンザニア連合共和国",
@@ -1570,6 +888,17 @@
             "area": "AF",
             "created_at": "2018-10-07T18:12:02.914Z",
             "updated_at": "2018-11-03T14:14:53.949Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 179,
+        "fields": {
+            "formal_name": "チェコ共和国",
+            "short_name": "チェコ",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:52.365Z",
+            "updated_at": "2018-11-03T14:39:00.756Z"
         }
     },
     {
@@ -1585,17 +914,6 @@
     },
     {
         "model": "trip_app.country",
-        "pk": 308,
-        "fields": {
-            "formal_name": "中央アフリカ共和国",
-            "short_name": "中央アフリカ",
-            "area": "AF",
-            "created_at": "2018-10-07T18:12:02.949Z",
-            "updated_at": "2018-11-03T14:14:28.995Z"
-        }
-    },
-    {
-        "model": "trip_app.country",
         "pk": 309,
         "fields": {
             "formal_name": "チュニジア共和国",
@@ -1607,6 +925,50 @@
     },
     {
         "model": "trip_app.country",
+        "pk": 272,
+        "fields": {
+            "formal_name": "チリ共和国",
+            "short_name": "チリ",
+            "area": "SA",
+            "created_at": "2018-10-07T18:12:00.215Z",
+            "updated_at": "2018-11-03T14:21:50.048Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 180,
+        "fields": {
+            "formal_name": "デンマーク王国",
+            "short_name": "デンマーク",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:52.409Z",
+            "updated_at": "2018-11-03T14:38:53.323Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 227,
+        "fields": {
+            "formal_name": "トルクメニスタン",
+            "short_name": "トルクメニスタン",
+            "area": "AS",
+            "created_at": "2018-10-07T18:11:55.964Z",
+            "updated_at": "2018-11-03T14:31:51.069Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 201,
+        "fields": {
+            "formal_name": "トルコ共和国",
+            "short_name": "トルコ",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:54.265Z",
+            "updated_at": "2018-11-03T14:35:21.542Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
         "pk": 310,
         "fields": {
             "formal_name": "トーゴ共和国",
@@ -1614,6 +976,39 @@
             "area": "AF",
             "created_at": "2018-10-07T18:12:02.988Z",
             "updated_at": "2018-11-03T14:13:30.176Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 181,
+        "fields": {
+            "formal_name": "ドイツ連邦共和国",
+            "short_name": "ドイツ",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:52.438Z",
+            "updated_at": "2018-11-03T14:39:10.412Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 258,
+        "fields": {
+            "formal_name": "ドミニカ共和国",
+            "short_name": "ドミニカ共和国",
+            "area": "NA",
+            "created_at": "2018-10-07T18:11:58.885Z",
+            "updated_at": "2018-11-03T14:24:51.255Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 259,
+        "fields": {
+            "formal_name": "ドミニカ国",
+            "short_name": "ドミニカ国",
+            "area": "NA",
+            "created_at": "2018-10-07T18:11:58.891Z",
+            "updated_at": "2018-11-03T14:24:41.068Z"
         }
     },
     {
@@ -1640,6 +1035,17 @@
     },
     {
         "model": "trip_app.country",
+        "pk": 260,
+        "fields": {
+            "formal_name": "ニカラグア共和国",
+            "short_name": "ニカラグア",
+            "area": "NA",
+            "created_at": "2018-10-07T18:11:58.896Z",
+            "updated_at": "2018-11-03T14:24:07.064Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
         "pk": 313,
         "fields": {
             "formal_name": "ニジェール共和国",
@@ -1647,6 +1053,248 @@
             "area": "AF",
             "created_at": "2018-10-07T18:12:03.011Z",
             "updated_at": "2018-11-03T14:13:03.390Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 281,
+        "fields": {
+            "formal_name": "ニュージーランド",
+            "short_name": "ニュージーランド",
+            "area": "OC",
+            "created_at": "2018-10-07T18:12:01.520Z",
+            "updated_at": "2018-11-03T14:19:54.269Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 228,
+        "fields": {
+            "formal_name": "ネパール連邦民主共和国",
+            "short_name": "ネパール",
+            "area": "AS",
+            "created_at": "2018-10-07T18:11:55.976Z",
+            "updated_at": "2018-11-03T14:31:08.948Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 182,
+        "fields": {
+            "formal_name": "ノルウェー王国",
+            "short_name": "ノルウェー",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:52.567Z",
+            "updated_at": "2018-11-03T14:38:40.842Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 261,
+        "fields": {
+            "formal_name": "ハイチ共和国",
+            "short_name": "ハイチ",
+            "area": "NA",
+            "created_at": "2018-10-07T18:11:58.905Z",
+            "updated_at": "2018-11-03T14:23:53.875Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 203,
+        "fields": {
+            "formal_name": "ハンガリー",
+            "short_name": "ハンガリー",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:54.331Z",
+            "updated_at": "2018-11-03T14:35:02.520Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 202,
+        "fields": {
+            "formal_name": "バチカン市国",
+            "short_name": "バチカン",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:54.321Z",
+            "updated_at": "2018-11-03T14:35:11.861Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 282,
+        "fields": {
+            "formal_name": "バヌアツ共和国",
+            "short_name": "バヌアツ",
+            "area": "OC",
+            "created_at": "2018-10-07T18:12:01.531Z",
+            "updated_at": "2018-11-03T14:19:43.212Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 263,
+        "fields": {
+            "formal_name": "バルバドス",
+            "short_name": "バルバドス",
+            "area": "NA",
+            "created_at": "2018-10-07T18:11:58.928Z",
+            "updated_at": "2018-11-03T14:23:33.281Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 242,
+        "fields": {
+            "formal_name": "バングラデシュ人民共和国",
+            "short_name": "バングラデシュ",
+            "area": "AS",
+            "created_at": "2018-10-07T18:11:57.490Z",
+            "updated_at": "2018-11-03T14:28:48.309Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 231,
+        "fields": {
+            "formal_name": "バーレーン王国",
+            "short_name": "バーレーン",
+            "area": "AS",
+            "created_at": "2018-10-07T18:11:56.017Z",
+            "updated_at": "2018-11-03T14:30:33.280Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 229,
+        "fields": {
+            "formal_name": "パキスタン・イスラム共和国",
+            "short_name": "パキスタン",
+            "area": "AS",
+            "created_at": "2018-10-07T18:11:55.989Z",
+            "updated_at": "2018-11-03T14:31:00.121Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 262,
+        "fields": {
+            "formal_name": "パナマ共和国",
+            "short_name": "パナマ",
+            "area": "NA",
+            "created_at": "2018-10-07T18:11:58.910Z",
+            "updated_at": "2018-11-03T14:23:42.386Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 283,
+        "fields": {
+            "formal_name": "パプアニューギニア独立国",
+            "short_name": "パプアニューギニア",
+            "area": "OC",
+            "created_at": "2018-10-07T18:12:01.536Z",
+            "updated_at": "2018-11-03T14:19:32.077Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 284,
+        "fields": {
+            "formal_name": "パラオ共和国",
+            "short_name": "パラオ",
+            "area": "OC",
+            "created_at": "2018-10-07T18:12:01.542Z",
+            "updated_at": "2018-11-03T14:19:21.641Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 273,
+        "fields": {
+            "formal_name": "パラグアイ共和国",
+            "short_name": "パラグアイ",
+            "area": "SA",
+            "created_at": "2018-10-07T18:12:00.236Z",
+            "updated_at": "2018-11-03T14:21:37.932Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 230,
+        "fields": {
+            "formal_name": "パレスチナ自治政府",
+            "short_name": "パレスチナ",
+            "area": "AS",
+            "created_at": "2018-10-07T18:11:56.009Z",
+            "updated_at": "2018-11-03T14:30:42.208Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 285,
+        "fields": {
+            "formal_name": "フィジー共和国",
+            "short_name": "フィジー",
+            "area": "OC",
+            "created_at": "2018-10-07T18:12:01.547Z",
+            "updated_at": "2018-11-03T14:19:12.142Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 243,
+        "fields": {
+            "formal_name": "フィリピン共和国",
+            "short_name": "フィリピン",
+            "area": "AS",
+            "created_at": "2018-10-07T18:11:57.501Z",
+            "updated_at": "2018-11-03T14:28:38.528Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 183,
+        "fields": {
+            "formal_name": "フィンランド共和国",
+            "short_name": "フィンランド",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:52.595Z",
+            "updated_at": "2018-11-03T14:38:32.829Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 170,
+        "fields": {
+            "formal_name": "フランス共和国",
+            "short_name": "フランス",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:50.880Z",
+            "updated_at": "2018-11-03T14:40:26.797Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 274,
+        "fields": {
+            "formal_name": "ブラジル連邦共和国",
+            "short_name": "ブラジル",
+            "area": "SA",
+            "created_at": "2018-10-07T18:12:00.242Z",
+            "updated_at": "2018-11-03T14:21:17.191Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 204,
+        "fields": {
+            "formal_name": "ブルガリア共和国",
+            "short_name": "ブルガリア",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:54.363Z",
+            "updated_at": "2018-11-03T14:34:54.664Z"
         }
     },
     {
@@ -1662,6 +1310,17 @@
     },
     {
         "model": "trip_app.country",
+        "pk": 244,
+        "fields": {
+            "formal_name": "ベトナム社会主義共和国",
+            "short_name": "ベトナム",
+            "area": "AS",
+            "created_at": "2018-10-07T18:11:57.521Z",
+            "updated_at": "2018-11-03T14:28:27.358Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
         "pk": 315,
         "fields": {
             "formal_name": "ベナン共和国",
@@ -1673,6 +1332,83 @@
     },
     {
         "model": "trip_app.country",
+        "pk": 275,
+        "fields": {
+            "formal_name": "ベネズエラ・ボリバル共和国",
+            "short_name": "ベネズエラ",
+            "area": "SA",
+            "created_at": "2018-10-07T18:12:00.307Z",
+            "updated_at": "2018-11-03T14:21:06.974Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 184,
+        "fields": {
+            "formal_name": "ベラルーシ共和国",
+            "short_name": "ベラルーシ",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:52.621Z",
+            "updated_at": "2018-11-03T14:38:25.142Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 264,
+        "fields": {
+            "formal_name": "ベリーズ",
+            "short_name": "ベリーズ",
+            "area": "NA",
+            "created_at": "2018-10-07T18:11:58.933Z",
+            "updated_at": "2018-11-03T14:23:22.893Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 171,
+        "fields": {
+            "formal_name": "ベルギー王国",
+            "short_name": "ベルギー",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:51.021Z",
+            "updated_at": "2018-11-03T14:40:17.345Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 276,
+        "fields": {
+            "formal_name": "ペルー共和国",
+            "short_name": "ペルー",
+            "area": "SA",
+            "created_at": "2018-10-07T18:12:00.321Z",
+            "updated_at": "2018-11-03T14:20:54.372Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 265,
+        "fields": {
+            "formal_name": "ホンジュラス共和国",
+            "short_name": "ホンジュラス",
+            "area": "NA",
+            "created_at": "2018-10-07T18:11:58.937Z",
+            "updated_at": "2018-11-03T14:23:13.691Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 205,
+        "fields": {
+            "formal_name": "ボスニア・ヘルツェゴビナ",
+            "short_name": "ボスニア・ヘルツェゴビナ",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:54.396Z",
+            "updated_at": "2018-11-03T14:34:47.489Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
         "pk": 316,
         "fields": {
             "formal_name": "ボツワナ共和国",
@@ -1680,6 +1416,50 @@
             "area": "AF",
             "created_at": "2018-10-07T18:12:03.032Z",
             "updated_at": "2018-11-03T14:12:32.725Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 277,
+        "fields": {
+            "formal_name": "ボリビア多民族国",
+            "short_name": "ボリビア",
+            "area": "SA",
+            "created_at": "2018-10-07T18:12:00.364Z",
+            "updated_at": "2018-11-03T14:20:42.562Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 172,
+        "fields": {
+            "formal_name": "ポルトガル共和国",
+            "short_name": "ポルトガル",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:51.067Z",
+            "updated_at": "2018-11-03T14:40:08.986Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 185,
+        "fields": {
+            "formal_name": "ポーランド共和国",
+            "short_name": "ポーランド",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:52.636Z",
+            "updated_at": "2018-11-03T14:38:16.662Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 206,
+        "fields": {
+            "formal_name": "マケドニア旧ユーゴスラビア共和国",
+            "short_name": "マケドニア",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:54.409Z",
+            "updated_at": "2018-11-03T14:34:38.483Z"
         }
     },
     {
@@ -1717,13 +1497,57 @@
     },
     {
         "model": "trip_app.country",
-        "pk": 320,
+        "pk": 207,
         "fields": {
-            "formal_name": "南アフリカ共和国",
-            "short_name": "南アフリカ",
-            "area": "AF",
-            "created_at": "2018-10-07T18:12:03.082Z",
-            "updated_at": "2018-11-03T14:11:49.019Z"
+            "formal_name": "マルタ共和国",
+            "short_name": "マルタ",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:54.414Z",
+            "updated_at": "2018-11-03T14:34:30.344Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 245,
+        "fields": {
+            "formal_name": "マレーシア",
+            "short_name": "マレーシア",
+            "area": "AS",
+            "created_at": "2018-10-07T18:11:57.548Z",
+            "updated_at": "2018-11-03T14:28:12.706Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 286,
+        "fields": {
+            "formal_name": "マーシャル諸島共和国",
+            "short_name": "マーシャル諸島",
+            "area": "OC",
+            "created_at": "2018-10-07T18:12:01.553Z",
+            "updated_at": "2018-11-03T14:19:01.573Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 246,
+        "fields": {
+            "formal_name": "ミャンマー連邦共和国",
+            "short_name": "ミャンマー",
+            "area": "AS",
+            "created_at": "2018-10-07T18:11:57.564Z",
+            "updated_at": "2018-11-03T14:28:03.112Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 266,
+        "fields": {
+            "formal_name": "メキシコ合衆国",
+            "short_name": "メキシコ",
+            "area": "NA",
+            "created_at": "2018-10-07T18:11:58.944Z",
+            "updated_at": "2018-11-03T14:22:53.983Z"
         }
     },
     {
@@ -1735,6 +1559,50 @@
             "area": "AF",
             "created_at": "2018-10-07T18:12:03.116Z",
             "updated_at": "2018-11-03T14:11:19.358Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 186,
+        "fields": {
+            "formal_name": "モルドバ共和国",
+            "short_name": "モルドバ",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:52.689Z",
+            "updated_at": "2018-11-03T14:38:08.553Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 324,
+        "fields": {
+            "formal_name": "モロッコ王国",
+            "short_name": "モロッコ",
+            "area": "AF",
+            "created_at": "2018-10-07T18:12:03.139Z",
+            "updated_at": "2018-11-03T14:10:29.314Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 247,
+        "fields": {
+            "formal_name": "モンゴル国",
+            "short_name": "モンゴル",
+            "area": "AS",
+            "created_at": "2018-10-07T18:11:57.569Z",
+            "updated_at": "2018-11-03T14:27:38.551Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 208,
+        "fields": {
+            "formal_name": "モンテネグロ",
+            "short_name": "モンテネグロ",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:54.426Z",
+            "updated_at": "2018-11-03T14:34:22.156Z"
         }
     },
     {
@@ -1761,13 +1629,46 @@
     },
     {
         "model": "trip_app.country",
-        "pk": 324,
+        "pk": 232,
         "fields": {
-            "formal_name": "モロッコ王国",
-            "short_name": "モロッコ",
-            "area": "AF",
-            "created_at": "2018-10-07T18:12:03.139Z",
-            "updated_at": "2018-11-03T14:10:29.314Z"
+            "formal_name": "ヨルダン・ハシェミット王国",
+            "short_name": "ヨルダン",
+            "area": "AS",
+            "created_at": "2018-10-07T18:11:56.028Z",
+            "updated_at": "2018-11-03T14:30:23.557Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 248,
+        "fields": {
+            "formal_name": "ラオス人民民主共和国",
+            "short_name": "ラオス",
+            "area": "AS",
+            "created_at": "2018-10-07T18:11:57.582Z",
+            "updated_at": "2018-11-03T14:27:29.113Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 187,
+        "fields": {
+            "formal_name": "ラトビア共和国",
+            "short_name": "ラトビア",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:52.694Z",
+            "updated_at": "2018-11-03T14:38:00.172Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 188,
+        "fields": {
+            "formal_name": "リトアニア共和国",
+            "short_name": "リトアニア",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:52.703Z",
+            "updated_at": "2018-11-03T14:37:49.293Z"
         }
     },
     {
@@ -1783,6 +1684,28 @@
     },
     {
         "model": "trip_app.country",
+        "pk": 173,
+        "fields": {
+            "formal_name": "ルクセンブルク大公国",
+            "short_name": "ルクセンブルク",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:51.123Z",
+            "updated_at": "2018-11-03T14:40:00.127Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 209,
+        "fields": {
+            "formal_name": "ルーマニア",
+            "short_name": "ルーマニア",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:54.439Z",
+            "updated_at": "2018-11-03T14:34:13.007Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
         "pk": 326,
         "fields": {
             "formal_name": "レソト王国",
@@ -1790,6 +1713,94 @@
             "area": "AF",
             "created_at": "2018-10-07T18:12:03.195Z",
             "updated_at": "2018-11-03T14:10:10.159Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 233,
+        "fields": {
+            "formal_name": "レバノン共和国",
+            "short_name": "レバノン",
+            "area": "AS",
+            "created_at": "2018-10-07T18:11:56.051Z",
+            "updated_at": "2018-11-03T14:30:11.979Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 189,
+        "fields": {
+            "formal_name": "ロシア",
+            "short_name": "ロシア",
+            "area": "EU",
+            "created_at": "2018-10-07T18:11:52.719Z",
+            "updated_at": "2018-11-03T14:37:40.285Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 240,
+        "fields": {
+            "formal_name": "中華人民共和国",
+            "short_name": "中国",
+            "area": "AS",
+            "created_at": "2018-10-07T18:11:57.273Z",
+            "updated_at": "2018-11-03T14:29:05.233Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 308,
+        "fields": {
+            "formal_name": "中央アフリカ共和国",
+            "short_name": "中央アフリカ",
+            "area": "AF",
+            "created_at": "2018-10-07T18:12:02.949Z",
+            "updated_at": "2018-11-03T14:14:28.995Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 236,
+        "fields": {
+            "formal_name": "北朝鮮（朝鮮民主主義人民共和国）",
+            "short_name": "北朝鮮",
+            "area": "AS",
+            "created_at": "2018-10-07T18:11:57.202Z",
+            "updated_at": "2018-11-03T14:29:46.228Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 320,
+        "fields": {
+            "formal_name": "南アフリカ共和国",
+            "short_name": "南アフリカ",
+            "area": "AF",
+            "created_at": "2018-10-07T18:12:03.082Z",
+            "updated_at": "2018-11-03T14:11:49.019Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 241,
+        "fields": {
+            "formal_name": "日本国",
+            "short_name": "日本",
+            "area": "AS",
+            "created_at": "2018-10-07T18:11:57.432Z",
+            "updated_at": "2018-11-03T14:03:40.923Z"
+        }
+    },
+    {
+        "model": "trip_app.country",
+        "pk": 239,
+        "fields": {
+            "formal_name": "大韓民国",
+            "short_name": "韓国",
+            "area": "AS",
+            "created_at": "2018-10-07T18:11:57.237Z",
+            "updated_at": "2018-11-03T14:29:18.293Z"
         }
     }
 ]

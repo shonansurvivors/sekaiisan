@@ -25,6 +25,9 @@
                         <h1 class="card-text h5">
                             {{ heritage_object.formal_name }}のブログ記事一覧
                         </h1>
+                        <small class="text-muted">
+                            {{ heritage_object.description|default:"" }}
+                        </small>
                     </div>
                 </div>
             {% elif blog_object %}
