@@ -7,6 +7,9 @@ class Tag(models.Model):
     description = models.TextField(verbose_name='タグ説明', blank=True, null=True)
     created_at = models.DateTimeField(verbose_name='作成日', auto_now_add=True)
 
+    class Meta:
+        ordering = ('name',)
+
     def __str__(self):
         return self.name
 
