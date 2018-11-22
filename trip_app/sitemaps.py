@@ -6,10 +6,10 @@ from .models import Heritage, Country, Blog
 
 class ArticleListSitemap(Sitemap):
 
-    changefreq = 'daily'
+    changefreq = 'weekly'
     priority = 1.0
     protocol = 'https'
-    lastmod = datetime.datetime.now()
+    lastmod = datetime.datetime.strptime('2018/11/21', '%Y/%m/%d')
 
     def items(self):
         return ['index']
@@ -20,10 +20,10 @@ class ArticleListSitemap(Sitemap):
 
 class HeritageListSitemap(Sitemap):
 
-    changefreq = 'daily'
-    priority = 1.0
+    changefreq = 'weekly'
+    priority = 0.3
     protocol = 'https'
-    lastmod = datetime.datetime.now()
+    lastmod = datetime.datetime.strptime('2018/11/21', '%Y/%m/%d')
 
     def items(self):
         return ['index']
@@ -34,10 +34,10 @@ class HeritageListSitemap(Sitemap):
 
 class HeritageArticleListSitemap(Sitemap):
 
-    changefreq = 'daily'
+    changefreq = 'weekly'
     priority = 1.0
     protocol = 'https'
-    lastmod = datetime.datetime.now()
+    lastmod = datetime.datetime.strptime('2018/11/21', '%Y/%m/%d')
 
     def items(self):
         return Heritage.objects.\
@@ -49,10 +49,10 @@ class HeritageArticleListSitemap(Sitemap):
 
 class BlogArticleListSitemap(Sitemap):
 
-    changefreq = 'daily'
-    priority = 0.7
+    changefreq = 'weekly'
+    priority = 1.0
     protocol = 'https'
-    lastmod = datetime.datetime.now()
+    lastmod = datetime.datetime.strptime('2018/11/21', '%Y/%m/%d')
 
     def items(self):
         return Blog.objects.\
@@ -64,10 +64,10 @@ class BlogArticleListSitemap(Sitemap):
 
 class CountryHeritageListSitemap(Sitemap):
 
-    changefreq = 'daily'
-    priority = 0.5
+    changefreq = 'weekly'
+    priority = 0.3
     protocol = 'https'
-    lastmod = datetime.datetime.now()
+    lastmod = datetime.datetime.strptime('2018/11/21', '%Y/%m/%d')
 
     def items(self):
         return Country.objects.\
