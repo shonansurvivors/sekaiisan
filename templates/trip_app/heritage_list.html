@@ -3,7 +3,7 @@
 
 <head>
     {% include "common_head.html" %}
-    {% if country_name %}
+    {% if country_object %}
         <title>{{ country_object.short_name }}の旅行記・ブログ集 | 世界遺産トラベラーズ</title>
         <meta name="description" content="{{ heritage_list.0.formal_name }} / {{ heritage_list.1.formal_name }} / {{ heritage_list.2.formal_name }}">
     {% else %}
