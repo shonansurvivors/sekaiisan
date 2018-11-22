@@ -15,12 +15,10 @@
                     <h1 class="card-text h5">
                         ブログ一覧
                     </h1>
-                    {% if is_paginated %}
-                          <small class="text-muted">
-                            {% load humanize %}
-                            ブログ数: {{ paginator.count|intcomma}}
-                          </small>
-                    {% endif %}
+                    <small class="text-muted">
+                      {% load humanize %}
+                      ブログ数: {{ paginator.count|intcomma}}
+                    </small>
                 </div>
             </div>
             <div class="card w-100">
