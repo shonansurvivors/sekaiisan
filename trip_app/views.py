@@ -83,7 +83,7 @@ class ArticleListView(ListView):
     queryset = Article.objects.filter(word_count_per_image__gt=0, heritage__isnull=False, blog__hidden=False). \
         select_related('blog').prefetch_related('heritage').distinct()
     ordering = ['-created_at']
-    paginate_by = 20
+    paginate_by = 40
     template_name = 'trip_app/article_list.html'
 
 
@@ -94,7 +94,7 @@ class HeritageListView(ListView):
             filter(article__word_count_per_image__gt=0, article__blog__hidden=False).\
             annotate(article_count=Count('article', distinct=True))
     ordering = ['formal_name']
-    paginate_by = 40
+    paginate_by = 2000
     template_name = 'trip_app/heritage_list.html'
 
 

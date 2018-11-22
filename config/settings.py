@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'django.contrib.sitemaps',
+    'django.contrib.humanize',
     'crispy_forms',
     'pure_pagination',
     'toy_app.apps.ToyAppConfig',
@@ -142,6 +143,15 @@ PAGINATION_SETTINGS = {
     'SHOW_FIRST_PAGE_WHEN_INVALID': True,
 }
 '''
+# for intcomma in django.contrib.humanize
+NUMBER_GROUPING = 3
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
+        'LOCATION': 'my_cache_table',
+    }
+}
 
 import dj_database_url
 DATABASES['default'] = dj_database_url.config()

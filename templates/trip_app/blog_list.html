@@ -3,7 +3,7 @@
 
 <head>
     {% include "common_head.html" %}
-    <title>世界遺産の旅行記・ブログ集 | 世界遺産トラベラーズ</title>
+    <title>世界遺産関連記事・旅行記があるブログ一覧 | 世界遺産トラベラーズ</title>
 </head>
 <body>
     {% include "navbar.html" %}
@@ -15,6 +15,12 @@
                     <h1 class="card-text h5">
                         ブログ一覧
                     </h1>
+                    {% if is_paginated %}
+                          <small class="text-muted">
+                            {% load humanize %}
+                            ブログ数: {{ paginator.count|intcomma}}
+                          </small>
+                    {% endif %}
                 </div>
             </div>
             <div class="card w-100">

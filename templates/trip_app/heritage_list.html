@@ -7,7 +7,7 @@
         <title>{{ country_object.short_name }}の旅行記・ブログ集 | 世界遺産トラベラーズ</title>
         <meta name="description" content="{{ heritage_list.0.formal_name }} / {{ heritage_list.1.formal_name }} / {{ heritage_list.2.formal_name }}">
     {% else %}
-        <title>世界遺産の旅行記・ブログ集 世界遺産一覧 | 世界遺産トラベラーズ</title>
+        <title>ブログ記事がある世界遺産一覧 | 世界遺産トラベラーズ</title>
         <meta name="description" content="日本・海外の世界遺産に関するブログへのリンクを多数掲載。アンコールワット、ガウディの作品群、タージマハル、フィレンツェ、プラハ、ホイアン...">
     {% endif %}
 </head>
@@ -28,8 +28,12 @@
                 <div class="card w-100">
                     <div class="card-body">
                         <h1 class="card-text h5">
-                             ブログ記事のある世界遺産一覧
+                             ブログ記事がある世界遺産一覧
                         </h1>
+                          <small class="text-muted">
+                            {% load humanize %}
+                            掲載世界遺産数: {{ paginator.count|intcomma}} / 1,092
+                          </small>
                     </div>
                 </div>
             {% endif %}

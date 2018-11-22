@@ -270,54 +270,68 @@ class Article(models.Model):
             else:
                 print('word_count is less than 1000')
 
-    def scraping_content(self):
+    def scraping_content(self, url):
 
-        print(f'scraping_content run. Article.pk: {self.pk} url: {self.url}')
+        print(f'scraping_content run. url: {url}')
 
         sleep(1)
-        r = requests.get(self.url)
+        r = requests.get(url)
         soup = BeautifulSoup(r.content, 'html.parser')
 
         try:
             if soup.html.get('data-admin-domain') == '//blog.hatena.ne.jp':
                 self.title = soup.find(class_='entry-title').text
-
-                try:
-                    self.text = soup.find_all(class_='entry-content')[-1].text
-                    self.word_count = len(soup.find_all(class_='entry-content')[-1].text)
-                    self.image_count = len(soup.find_all(class_='entry-content')[-1].find_all('img'))
-                    if self.image_count:
-                        self.word_count_per_image = self.word_count // self.image_count
-
-                    blog_domain = soup.html.get('data-blog-host')
-
-                    if blog_domain:
-
-                        try:
-                            blog = Blog.objects.get(domain=blog_domain)
-
-                        except ObjectDoesNotExist:
-                            blog = Blog()
-                            blog.domain = blog_domain
-
-                        blog.title = soup.html.get('data-blog-name')
-                        blog.author_name = soup.html.get('data-blog-owner')
-                        blog.author_id = blog.author_name
-                        blog.save()
-
-                        self.blog = blog
-                        print(f'Blog is created or updated. pk: {blog.pk} title: {blog.title}')
-
-                    self.save()
-                    print(f'Article is updated. title: {self.title}')
-
-                    self.update_heritage()
-
-                except IndexError:
-                    print(f'BeautifulSoup: IndexError(entry-content is not found)')
-
+                print(f'{self.title}')
+            else:
+                print(f"soup.html.get('data-admin-domain') != '//blog.hatena.ne.jp'")
+                return
         except AttributeError:
-            print(f'BeautifulSoup: AttributeError')
+            print(f"soup.find(class_='entry-title').text is not exist(AttributeError)")
+            return
+
+        try:
+            self.text = soup.find_all(class_='entry-content')[-1].text
+            self.word_count = len(soup.find_all(class_='entry-content')[-1].text)
+            self.image_count = len(soup.find_all(class_='entry-content')[-1].find_all('img'))
+            if self.image_count:
+                self.word_count_per_image = self.word_count // self.image_count
+        except IndexError:
+            print(f"(class_='entry-content')[-1] is not exist(IndexError)")
+            return
+
+        self.save()
+
+        heritages = Heritage.objects.all()
+        # self.heritage.clear()
+        for heritage in heritages:
+            if re.search(heritage.regex, self.text):
+                self.heritage.add(heritage)
+                print(f'{self.title} has {heritage.formal_name}')
+        self.text = self.text[:200]
+        if self.heritage is None:
+            print(f'{self.title} has no heritages...')
+            self.delete()
+            return
+
+        blog_domain = soup.html.get('data-blog-host')
+        if not blog_domain:
+            print(f"soup.html.get('data-blog-host') is not exist")
+            return
+        try:
+            blog = Blog.objects.get(domain=blog_domain)
+        except ObjectDoesNotExist:
+            blog = Blog()
+            blog.domain = blog_domain
+        blog.title = soup.html.get('data-blog-name')
+        blog.author_name = soup.html.get('data-blog-owner')
+        blog.author_id = blog.author_name
+        blog.save()
+        print(f'Blog is created or updated. pk:{blog.pk} title:{blog.title}')
+
+        self.blog = blog
+
+        self.save()
+        print(f'Article is created or updated. pk:{self.pk} title:{self.title}')
 
     @classmethod
     def scraping_content_all(cls):
