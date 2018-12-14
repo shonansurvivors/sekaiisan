@@ -274,64 +274,96 @@ class Article(models.Model):
 
         print(f'scraping_content run. url: {url}')
 
+        if Article.objects.filter(url=url).exists():
+            print('Article has this url already')
+            return
+
+        self.url = url
+
         sleep(1)
         r = requests.get(url)
         soup = BeautifulSoup(r.content, 'html.parser')
 
-        try:
-            if soup.html.get('data-admin-domain') == '//blog.hatena.ne.jp':
-                self.title = soup.find(class_='entry-title').text
-                print(f'{self.title}')
-            else:
-                print(f"soup.html.get('data-admin-domain') != '//blog.hatena.ne.jp'")
+        if 'blog.livedoor.jp' in url:
+            try:
+                self.title = soup.find(class_='article-title').text
+                self.text = soup.find(class_='article-body-inner').text
+            except AttributeError:
+                print('This Livedoor Blog entry has not title or body(AttributeError)')
                 return
-        except AttributeError:
-            print(f"soup.find(class_='entry-title').text is not exist(AttributeError)")
+            self.image_count = len(soup.find(class_='article-body-inner').find_all('img'))
+        elif soup.html.get('data-admin-domain') == '//blog.hatena.ne.jp':
+            try:
+                self.title = soup.find(class_='entry-title').text
+            except AttributeError:
+                print('This Hatena Blog entry has not title(AttributeError)')
+                return
+            try:
+                self.text = soup.find_all(class_='entry-content')[-1].text
+                self.image_count = len(soup.find_all(class_='entry-content')[-1].find_all('img'))
+            except IndexError:
+                print(f"(class_='entry-content')[-1] is not exist(IndexError)")
+                return
+        else:
             return
 
-        try:
-            self.text = soup.find_all(class_='entry-content')[-1].text
-            self.word_count = len(soup.find_all(class_='entry-content')[-1].text)
-            self.image_count = len(soup.find_all(class_='entry-content')[-1].find_all('img'))
-            if self.image_count:
-                self.word_count_per_image = self.word_count // self.image_count
-        except IndexError:
-            print(f"(class_='entry-content')[-1] is not exist(IndexError)")
-            return
+        print(f'{self.title}')
+
+        self.word_count = len(self.text)
+        if self.image_count:
+            self.word_count_per_image = self.word_count // self.image_count
 
         self.save()
 
         heritages = Heritage.objects.all()
-        # self.heritage.clear()
         for heritage in heritages:
             if re.search(heritage.regex, self.text):
                 self.heritage.add(heritage)
                 print(f'{self.title} has {heritage.formal_name}')
-        self.text = self.text[:200]
-        if self.heritage is None:
+        if not self.heritage.exists():
             print(f'{self.title} has no heritages...')
             self.delete()
             return
 
-        blog_domain = soup.html.get('data-blog-host')
-        if not blog_domain:
-            print(f"soup.html.get('data-blog-host') is not exist")
+        self.text = self.text[:200]
+
+        if 'blog.livedoor.jp' in url:
+            blog_domain = re.sub('^https?://', '', soup.find(id='blog-title').a.get('href'))
+            if not blog_domain:
+                print(f'This Livedoor Blog has not blog_domain')
+                return
+            try:
+                blog = Blog.objects.get(domain=blog_domain)
+            except ObjectDoesNotExist:
+                blog = Blog()
+                blog.domain = blog_domain
+            blog.title = soup.find(id='blog-title').text
+            blog.author_name = None
+            blog.author_id = None
+        elif soup.html.get('data-admin-domain') == '//blog.hatena.ne.jp':
+            blog_domain = soup.html.get('data-blog-host')
+            if not blog_domain:
+                print(f"soup.html.get('data-blog-host') is not exist")
+                return
+            try:
+                blog = Blog.objects.get(domain=blog_domain)
+            except ObjectDoesNotExist:
+                blog = Blog()
+                blog.domain = blog_domain
+            blog.title = soup.html.get('data-blog-name')
+            blog.author_name = soup.html.get('data-blog-owner')
+            blog.author_id = blog.author_name
+        else:
             return
-        try:
-            blog = Blog.objects.get(domain=blog_domain)
-        except ObjectDoesNotExist:
-            blog = Blog()
-            blog.domain = blog_domain
-        blog.title = soup.html.get('data-blog-name')
-        blog.author_name = soup.html.get('data-blog-owner')
-        blog.author_id = blog.author_name
+
         blog.save()
         print(f'Blog is created or updated. pk:{blog.pk} title:{blog.title}')
 
         self.blog = blog
-
         self.save()
         print(f'Article is created or updated. pk:{self.pk} title:{self.title}')
+
+        return
 
     @classmethod
     def scraping_content_all(cls):

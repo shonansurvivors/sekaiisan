@@ -2,7 +2,6 @@ from django.urls import path
 from django.views.decorators.cache import cache_page
 from . import views
 
-
 urlpatterns = [
     path('', cache_page(3600 * 24)(views.ArticleListView.as_view()), name='article_list'),
     path('area/<str:area>/', cache_page(3600 * 24)(views.AreaCountryListView.as_view()), name='area_country_list'),
