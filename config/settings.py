@@ -148,7 +148,7 @@ NUMBER_GROUPING = 3
 
 CACHES = {
     'default': {
-        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'BACKEND': 'django_bmemcached.memcached.BMemcached',
         'LOCATION': [os.environ.get('MEMCACHEDCLOUD_SERVERS')],
         'OPTIONS': {
             'username': os.environ.get('MEMCACHEDCLOUD_USERNAME'),
