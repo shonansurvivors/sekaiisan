@@ -1,0 +1,282 @@
+/* common */
+
+main {
+  padding: 0;
+  margin: 0;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+
+}
+
+.header{
+  margin-left: 3%;
+}
+
+.list__anker{
+  text-decoration: none;
+  color : #212529;
+}
+
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Jumbotron */
+
+.jumbotron__wrap{
+  width: 100%;
+  position: relative;
+  background: #000;
+}
+
+.jumbotron__image{
+  width: 100%;
+  opacity: 0.7;
+}
+
+@media screen and (max-width:480px){
+  .jumbotron__image{
+    width: 200%;
+    margin-left: -50%;
+  }
+}
+
+.jumbotron__text{
+  width: 95%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+@media screen and (max-width:480px){
+  .jumbotron__text{
+    font-size: 1rem;
+  }
+}
+
+@keyframes jumbotron__text--fadeIn {
+  from {
+    opacity: 0;
+    padding-top: 2rem;
+    padding-bottom: 0;
+  }
+  to {
+    opacity: 1;
+    padding-top: 0;
+    padding-bottom: 2rem;
+  }
+}
+
+.jumbotron__text--1{
+  margin-top: 1rem;
+  opacity: 0;
+  padding-top: 2rem;
+  padding-bottom: 0;
+  animation-name: jumbotron__text--fadeIn;
+  animation-duration: 1.25s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+
+.jumbotron__text--2{
+  margin-top: 1rem;
+  opacity: 0;
+  padding-top: 2rem;
+  padding-bottom: 0;
+  animation-name: jumbotron__text--fadeIn;
+  animation-duration: 1.25s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+/* How to */
+
+.badge{
+  font-size: 1rem;;
+}
+
+.btn{
+  font-size: 1rem;
+  vertical-align: baseline;
+}
+
+.howto__wrap{
+  margin-top: 2rem;
+}
+
+.howto__header{
+  text-align: center;
+}
+
+.howto__detail__wrap{
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.howto__detail{
+  float: left;
+  width: 33.3%;
+  opacity: 0;
+  padding-top: 6%;
+  padding-bottom: 0%;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.howto__image{
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  padding: 5% 0;
+}
+
+@media screen and (max-width:480px){
+  .howto__detail{
+    float: none;
+    width: 100%;
+  }
+
+  .howto__image{
+    width: 30%;
+  }
+}
+
+@keyframes howto__detail--animation {
+  from {
+    padding-top: 6%;
+    padding-bottom: 0;
+    opacity: 0;
+  }
+  to {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    opacity: 1;
+  }
+}
+
+.howto__detail--isAnimation{
+  animation-name: howto__detail--animation;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+
+/* Country List */
+
+.countryList{
+  margin-top: 3%;
+  margin-left: 100%;
+  margin-right: -103%;
+  margin-bottom: 0;
+}
+
+.countryList__item {
+  width: 32%;
+  margin-bottom: 2%;
+  margin-right: 2%;
+  background: #eee;
+  float:left;
+}
+
+.countryList__item:nth-child(3n){
+  margin-right: 0;
+}
+
+.countryList__image{
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+@media screen and (max-width:768px){
+  .countryList__item{
+    width: 100%;
+    float:none;
+  }
+}
+
+@keyframes countryList--animation {
+  from {
+    margin-left: 100%;
+    margin-right: -103%;
+  }
+  to {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
+.countryList--isAnimation{
+  animation-name: countryList--animation;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+
+/* Heritage List */
+
+.heritageList{
+  margin-top: 3%;
+  margin-left: 100%;
+  margin-right: -103%;
+  margin-bottom: 0;
+}
+
+.heritageList__item{
+  width: 49%;
+  margin-bottom: 2%;
+  margin-right: 2%;
+  background: #eee;
+  float:left;
+}
+
+.heritageList__item:nth-child(2n){
+  margin-right: 0;
+}
+
+.heritageList__image{
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+@media screen and (max-width:768px){
+  .heritageList__item{
+    width: 100%;
+    float:none;
+  }
+}
+
+@keyframes heritageList--animation {
+  from {
+    margin-left: 100%;
+    margin-right: -103%;
+    opacity: 0;
+  }
+  to {
+    margin-left: 3%;
+    margin-right: 3%;
+    opacity: 1;
+  }
+}
+
+.heritageList--isAnimation{
+  animation-name: heritageList--animation;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}

@@ -1,0 +1,331 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  {% include "common_head.html" %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+  <title>世界遺産の旅行記・ブログ総合サイト | 世界遺産トラベラーズ</title>
+  <meta name="description" content="日本・海外の世界遺産に関するブログへのリンクを多数掲載。アンコールワット、ガウディの作品群、タージマハル、フィレンツェ、プラハ、ホイアン...">
+</head>
+<body>
+  {% include "navbar.html" %}
+  <main>
+    <div class="jumbotron__wrap">
+      <img class="jumbotron__image" src="{% static 'images/angkor-wat-temple-934094_1280-min.jpg' %}">
+      <div class="jumbotron__text">
+        <div class="jumbotron__text--1">
+          世界遺産トラベラーズは、<br>世界遺産に関するブログへのリンク集です。
+        </div>
+        <div class="jumbotron__text--2">
+          各ブログのリアルな旅の感想や美しい写真を通じて、<br>世界遺産をもっと楽しもう。
+        </div>
+      </div>
+    </div>
+    <div class="howto__wrap">
+      <h2 class="howto__header h4">世界遺産トラベラーズの使い方</h2>
+      <div class="howto__detail__wrap clearfix">
+        <div class="howto__detail howto__detail--1">
+          <h3 class="howto__header h4">地域・国から記事を探す</h3>
+          <img class="howto__image" src="{% static 'images/icon-map.png' %}">
+          <p>
+            地域別の国一覧をたどって、各世界遺産のブログ記事へ。
+          </p>
+        </div>
+        <div class="howto__detail howto__detail--2">
+          <h3 class="howto__header h4">世界遺産名から記事を探す</h3>
+          <img class="howto__image" src="{% static 'images/icon-heritage.png' %}">
+          <p>
+            <span class="badge badge-pill badge-info">世界遺産名</span>
+            ボタンから、各世界遺産の記事へ。
+          </p>
+          <p>
+            <a href="{% url 'heritage_list' %}">世界遺産一覧</a>では、世界遺産を50音順に掲載。
+          </p>
+        </div>
+        <div class="howto__detail howto__detail--3">
+          <h3 class="howto__header h4">ブログ名から記事を探す</h3>
+          <img class="howto__image" src="{% static 'images/icon-blog.png' %}">
+          <p>
+            <span class="btn btn-outline-info btn-sm">
+              ブログ名
+            </span>
+            ボタンから、各ブログの記事へ。
+          </p>
+          <p>
+            <a href="{% url 'blog_list' %}">ブログ一覧</a>では、世界遺産関連記事の多いブログを順に掲載。
+          </p>
+        </div>
+      </div>
+    </div>
+    <h2 class="header">おもな国から探す</h2>
+    <ul class="countryList clearfix">
+      <li class="countryList__item">
+        <a class="list__anker" href="{% url 'country_heritage_list' '英国（グレートブリテン及び北アイルランド連合王国）' %}">
+          <div>
+            <img class="countryList__image" src="{% static 'images/england-min.jpg' %}">
+            イギリス
+          </div>
+        </a>
+      </li>
+      <li class="countryList__item">
+        <a class="list__anker" href="{% url 'country_heritage_list' 'イタリア共和国' %}">
+          <div>
+            <img class="countryList__image" src="{% static 'images/italy-min.jpg' %}">
+            イタリア
+          </div>
+        </a>
+      </li>
+      <li class="countryList__item">
+        <a class="list__anker" href="{% url 'country_heritage_list' 'バチカン市国' %}">
+          <div>
+            <img class="countryList__image" src="{% static 'images/rome-1945033_1280-min.jpg' %}">
+            バチカン
+          </div>
+        </a>
+      </li>
+      <li class="countryList__item">
+        <a class="list__anker" href="{% url 'country_heritage_list' 'オーストリア共和国' %}">
+          <div>
+            <img class="countryList__image" src="{% static 'images/austria-3753977_1280-min.jpg' %}">
+            オーストリア
+          </div>
+        </a>
+      </li>
+      <li class="countryList__item">
+        <a class="list__anker" href="{% url 'country_heritage_list' 'クロアチア共和国' %}">
+          <div>
+            <img class="countryList__image" src="{% static 'images/dubrovnik-city-2236067_1280-min.jpg' %}">
+            クロアチア
+          </div>
+        </a>
+      </li>
+      <li class="countryList__item">
+        <a class="list__anker" href="{% url 'country_heritage_list' 'スペイン' %}">
+          <div>
+            <img class="countryList__image" src="{% static 'images/parc-guell-332390_1280-min.jpg' %}">
+            スペイン
+          </div>
+        </a>
+      </li>
+      <li class="countryList__item">
+        <a class="list__anker" href="{% url 'country_heritage_list' 'チェコ共和国' %}">
+          <div>
+            <img class="countryList__image" src="{% static 'images/prague-night-689897_1280-min.jpg' %}">
+            チェコ
+          </div>
+        </a>
+      </li>
+      <li class="countryList__item">
+        <a class="list__anker" href="{% url 'country_heritage_list' 'ドイツ連邦共和国' %}">
+          <div>
+            <img class="countryList__image" src="{% static 'images/dom-2092871_1280-min.jpg' %}">
+            ドイツ
+          </div>
+        </a>
+      </li>
+      <li class="countryList__item">
+        <a class="list__anker" href="{% url 'country_heritage_list' 'フランス共和国' %}">
+          <div>
+            <img class="countryList__image" src="{% static 'images/france-2921266_1280-min.jpg' %}">
+            フランス
+          </div>
+        </a>
+      </li>
+      <li class="countryList__item">
+        <a class="list__anker" href="{% url 'country_heritage_list' 'インド' %}">
+          <div>
+            <img class="countryList__image" src="{% static 'images/taj-mahal-1379273_1280-min.jpg' %}">
+            インド
+          </div>
+        </a>
+      </li>
+      <li class="countryList__item">
+        <a class="list__anker" href="{% url 'country_heritage_list' 'カンボジア王国' %}">
+          <div>
+            <img class="countryList__image" src="{% static 'images/angkor-wat-temple-934094_1280-min.jpg' %}">
+            カンボジア
+          </div>
+        </a>
+      </li>
+      <li class="countryList__item">
+        <a class="list__anker" href="{% url 'country_heritage_list' 'ベトナム社会主義共和国' %}">
+          <div>
+            <img class="countryList__image" src="{% static 'images/vietnam-1861050_1280-min.jpg' %}">
+            ベトナム
+          </div>
+        </a>
+      </li>
+      <li class="countryList__item">
+        <a class="list__anker" href="{% url 'country_heritage_list' '中華人民共和国' %}">
+          <div>
+            <img class="countryList__image" src="{% static 'images/china-2097078_1280-min.jpg' %}">
+            中国
+          </div>
+        </a>
+      </li>
+      <li class="countryList__item">
+        <a class="list__anker" href="{% url 'country_heritage_list' '日本国' %}">
+          <div>
+            <img class="countryList__image" src="{% static 'images/torii-1389085_1280-min.jpg' %}">
+            日本
+          </div>
+        </a>
+      </li>
+      <li class="countryList__item">
+        <a class="list__anker" href="{% url 'country_heritage_list' 'アメリカ合衆国' %}">
+          <div>
+            <img class="countryList__image" src="{% static 'images/grand-canyon-1246248_1280-min.jpg' %}">
+            アメリカ
+          </div>
+        </a>
+      </li>
+      <li class="countryList__item">
+        <a class="list__anker" href="{% url 'country_heritage_list' 'メキシコ合衆国' %}">
+          <div>
+            <img class="countryList__image" src="{% static 'images/fine-arts-649347_1280-min.jpg' %}">
+            メキシコ
+          </div>
+        </a>
+      </li>
+      <li class="countryList__item">
+        <a class="list__anker" href="{% url 'country_heritage_list' 'ペルー共和国' %}">
+          <div>
+            <img class="countryList__image" src="{% static 'images/machu-picchu-1631989_1280-min.jpg' %}">
+            ペルー
+          </div>
+        </a>
+      </li>
+      <li class="countryList__item">
+        <a class="list__anker" href="{% url 'country_heritage_list' 'オーストラリア連邦' %}">
+          <div>
+            <img class="countryList__image" src="{% static 'images/great-barrier-reef-261727_1280-min.jpg' %}">
+            オーストラリア
+          </div>
+        </a>
+      </li>
+    </ul>
+    
+    <h2 class="header">人気の世界遺産から探す</h2>
+    <ul class="heritageList clearfix">
+      <li class="heritageList__item">
+        <a class="list__anker" href="{% url 'heritage_article_list' 'アンコール' %}">
+          <div>
+            <img class="heritageList__image" src="{% static 'images/angkor-wat-temple-934094_1280-min.jpg' %}">
+            アンコール
+          </div>
+        </a>
+      </li>
+      <li class="heritageList__item">
+        <a class="list__anker" href="{% url 'heritage_article_list' 'アントニ・ガウディの作品群' %}">
+          <div>
+            <img class="heritageList__image" src="{% static 'images/parc-guell-332390_1280-min.jpg' %}">
+            アントニ・ガウディの作品群
+          </div>
+        </a>
+      </li>
+      <li class="heritageList__item">
+        <a class="list__anker" href="{% url 'heritage_article_list' 'グランド・キャニオン国立公園' %}">
+          <div>
+            <img class="heritageList__image" src="{% static 'images/grand-canyon-1246248_1280-min.jpg' %}">
+            グランド・キャニオン国立公園
+          </div>
+        </a>
+      </li>
+      <li class="heritageList__item">
+        <a class="list__anker" href="{% url 'heritage_article_list' 'グレート・バリア・リーフ' %}">
+          <div>
+            <img class="heritageList__image" src="{% static 'images/great-barrier-reef-261727_1280-min.jpg' %}">
+            グレート・バリア・リーフ
+          </div>
+        </a>
+      </li>
+      <li class="heritageList__item">
+        <a class="list__anker" href="{% url 'heritage_article_list' 'フィレンツェ歴史地区' %}">
+          <div>
+            <img class="heritageList__image" src="{% static 'images/italy-min.jpg' %}">
+            フィレンツェ歴史地区
+          </div>
+        </a>
+      </li>
+      <li class="heritageList__item">
+        <a class="list__anker" href="{% url 'heritage_article_list' 'マチュ・ピチュの歴史保護区' %}">
+          <div>
+            <img class="heritageList__image" src="{% static 'images/machu-picchu-1631989_1280-min.jpg' %}">
+            マチュ・ピチュの歴史保護区
+          </div>
+        </a>
+      </li>
+      <li class="heritageList__item">
+        <a class="list__anker" href="{% url 'heritage_article_list' 'モン-サン-ミシェルとその湾' %}">
+          <div>
+            <img class="heritageList__image" src="{% static 'images/france-2921266_1280-min.jpg' %}">
+            モン-サン-ミシェルとその湾
+          </div>
+        </a>
+      </li>
+      <li class="heritageList__item">
+        <a class="list__anker" href="{% url 'heritage_article_list' 'ヴェネツィアとその潟' %}">
+          <div>
+            <img class="heritageList__image" src="{% static 'images/venice-3183168_1280-min.jpg' %}">
+            ヴェネツィアとその潟
+          </div>
+        </a>
+      </li>
+      <li class="heritageList__item">
+        <a class="list__anker" href="{% url 'heritage_article_list' '古都アユタヤ' %}">
+          <div>
+            <img class="heritageList__image" src="{% static 'images/ayutthaya-2033589_1280-min.jpg' %}">
+            古都アユタヤ
+          </div>
+        </a>
+      </li>
+      <li class="heritageList__item">
+        <a class="list__anker" href="{% url 'heritage_article_list' '古都ホイアン' %}">
+          <div>
+            <img class="heritageList__image" src="{% static 'images/vietnam-1861050_1280-min.jpg' %}">
+            古都ホイアン
+          </div>
+        </a>
+      </li>
+      <li class="heritageList__item">
+        <a class="list__anker" href="{% url 'heritage_article_list' '万里の長城' %}">
+          <div>
+            <img class="heritageList__image" src="{% static 'images/china-2097078_1280-min.jpg' %}">
+            万里の長城
+          </div>
+        </a>
+      </li>
+      <li class="heritageList__item">
+        <a class="list__anker" href="{% url 'heritage_article_list' '屋久島' %}">
+          <div>
+            <img class="heritageList__image" src="{% static 'images/yakushima-island-2336735_1280-min.jpg' %}">
+             屋久島
+          </div>
+        </a>
+      </li>
+      <li class="heritageList__item">
+        <a class="list__anker" href="{% url 'heritage_article_list' '紀伊山地の霊場と参詣道' %}">
+          <div>
+            <img class="heritageList__image" src="{% static 'images/kumano-ancient-road-2389157_1280-min.jpg' %}">
+            紀伊山地の霊場と参詣道
+          </div>
+        </a>
+      </li>
+      <li class="heritageList__item">
+        <a class="list__anker" href="{% url 'heritage_article_list' '厳島神社' %}">
+          <div>
+            <img class="heritageList__image" src="{% static 'images/torii-1389085_1280-min.jpg' %}">
+            厳島神社
+          </div>
+        </a>
+      </li>
+    </ul>
+  </main>
+  {% include "footer.html" %}
+  {% include "common_script.html" %}
+  {% load static %}
+  <script src="{% static 'js/index.js' %}" ></script>
+</body>
+</html>

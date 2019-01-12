@@ -1,11 +1,16 @@
 from django.db.models import Count
 from django.urls import reverse_lazy
 from django.shortcuts import render
-from django.views.generic import View, ListView
+from django.views.generic import View, ListView, TemplateView
 from django.views.generic.edit import FormView
 
 from .models import Article, Heritage, Country, Blog, SiteMaster
 from .forms import ContactForm
+
+
+class IndexView(TemplateView):
+
+    template_name = 'trip_app/index.html'
 
 
 class AboutUsView(View):

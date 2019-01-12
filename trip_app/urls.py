@@ -3,7 +3,8 @@ from django.views.decorators.cache import cache_page
 from . import views
 
 urlpatterns = [
-    path('', cache_page(3600 * 24)(views.ArticleListView.as_view()), name='article_list'),
+    path('', views.IndexView.as_view(), name='index'),
+    path('article/', cache_page(3600 * 24)(views.ArticleListView.as_view()), name='article_list'),
     path('area/<str:area>/', cache_page(3600 * 24)(views.AreaCountryListView.as_view()), name='area_country_list'),
     path('country/<str:name>/', views.CountryHeritageListView.as_view(), name='country_heritage_list'),
     path('heritage/', cache_page(3600 * 24)(views.HeritageListView.as_view()), name='heritage_list'),
