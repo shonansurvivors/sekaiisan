@@ -40,6 +40,11 @@ ul{
   opacity: 0.7;
 }
 
+.jumbotron__image{
+  width: 100%;
+  opacity: 0.7;
+}
+
 @media screen and (max-width:480px){
   .jumbotron__image{
     width: 200%;

@@ -4,3 +4,6 @@ staticfiles
 local_settings.py
 db.sqlite3
 *.py[co]$ git init
+/templates/toy_app/
+/toy_app/
+/trip_app/model_data/
