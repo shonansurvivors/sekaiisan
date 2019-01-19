@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'crispy_forms',
     'pure_pagination',
-    'toy_app.apps.ToyAppConfig',
     'trip_app.apps.TripAppConfig',
 #    'debug_toolbar',
 ]

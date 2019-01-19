@@ -2,6 +2,7 @@ myvenv
 __pycache__
 local_settings.py
 db.sqlite3
+staticfiles
 *.py[co]$ git init
 /templates/toy_app/
 /toy_app/
