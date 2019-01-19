@@ -7,3 +7,4 @@ staticfiles
 /templates/toy_app/
 /toy_app/
 /trip_app/model_data/
+/trip_app/bing.py
